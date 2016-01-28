@@ -5,8 +5,162 @@
     <title>HTML Academy: Глейси</title>
   </head>
   <body>
-
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive">Базовый HTML и CSS</a>».</p>
+    <header class="main-header">
+      <nav class="main-navigation">
+        <img src="http://placehold.it/100x50" width="100" height="50" alt="Gllacy Shop">
+        <ul>
+        <li><a href="#">Каталог</a></li>
+        <li><a href="#">Доставка и оплата</a></li>
+        <li><a href="#">О компании</a></li>
+        </ul>
+      </nav>
+        <div class="nav-btns serch-btn">
+          <input type="search" name="search-request" class="form search-form" placeholder="Что ищем?">
+        </div>
+        <div class="nav-btns user-block">
+          <form class="form user-form" method="post">
+            <input type="email" name="email" placeholder="Электронная почта">
+            <input type="password" name="password" placeholder="Пароль">
+            <input type="submit" value="Вход">
+            <a href="#">Забыли пароль?</a>
+            <a href="#">Новая регистрация</a>
+          </form>
+        </div>
+        <div class="nav-btns cart">
+          <div class="form order=list"
+            <!-- СПИСОК ЗАКАЗА! КАК ЕГО ДЕЛАТЬ? -->
+            <a class="btn order-btn" href="#">Оформить заказ</a>
+          </div>
+        </div>
+        <div class="work-time-block">
+          <p class="work-time">С 10 до 20, ежедневно</p>
+          <p class="work-phone">8 812 450-25-25</p>
+        </div>
+      </header>
+    <main>
+      <section class="adv-block">
+        <span class="adv-block-motto">Крем-брюле и пломбир с малиновым джемом</span>
+        <input type="radio" name="adv-block-slide" value="1" checked>
+        <input type="radio" name="adv-block-slide" value="2">
+        <input type="radio" name="adv-block-slide" value="3">
+        <a class="btn adv-block-btn" href="#">Дайте оба!</a>
+      </section>
+      <div class="index-content">
+        <div class="index-content-left">
+          <h2>Малинка даром!</h2>
+          <p>При покупке 2кг любого фруктового
+            мороженного, добавим в ваш заказ банку
+            банку малинового варенья бесплатно.</p>
+          <a class="btn index-content-left-btn" href="#">Хочу варенье!</a>
+        </div>
+        <div class="index-content-right">
+          <h2>Шоколадки даром!</h2>
+          <p>При покупке 2кг пломбира, добавим в ваш
+            заказ упаковку вкуснейшей шоколадной
+            присыпки абсолютно бесплатно.</p>
+          <a class="btn index-content-right-btn" href="#">Хочу шоколадку!</a>
+        </div>
+      </div>
+      <section class="hits">
+        <div class="item cream">
+          <b>320 р/кг</b> <!-- &#8381 - не работает... как сделать? -->
+          <p>Сливочное с апельсиновым джемом и циторусовой стружкой</p>
+          <a href="#" class="btn cream-btn">Быстрый просмотр</a>
+        </div>
+        <div class="item cream-coffee">
+          <b>380 р/кг</b>
+          <p>Сливочно-кофейное с кусочками шоколада</p>
+          <a href="#" class="btn cream-coffee-btn">Быстрый просмотр</a>
+        </div>
+        <div class="item cream-berry">
+          <b>355 р/кг</b>
+          <p>Сливочно-клубничное с присыпкой из белого шоколада</p>
+          <a href="#" class="btn cream-berry-btn">Быстрый просмотр</a>
+        </div>
+        <div class="item cream-brulee">
+          <b>415 р/кг</b>
+          <p>Сливочное крем-брюле с карамельной подливкой</p>
+          <a href="#" class="btn cream-brulee-btn">Быстрый просмотр</a>
+        </div>
+      </section>
+      <section class="about">
+        <h4>Магазин Глейси - это онлайн и оффлайн магазин по продаже
+          мороженного собственного производства на развес</h4>
+        <!-- Зафлотить и через nth-child задать before -->
+        <div>
+          Все наше мороженное изготавливается на
+          собственном производстве, с
+          использованием современного
+          оборудования и проверенных временем
+          технологий.
+        </div>
+        <div>
+          Закупка ингредиентов производится только
+          у проверенных фермерских хозяйств и
+          компаний, с которыми нас связывает
+          долговременное сотрудничество.
+        </div>
+        <div>
+          Для приготовления мороженного
+          используются настоящие сливки и молоко
+          высочайшего качества. Все дополнительные
+          ингредиенты произведены из натурального,
+          экологически чистого сырья.
+        </div>
+        <div>
+          Доставка нашего мороженного до
+          заказчиков осуществляется в специальном
+          термопаке, которая не дает мороженному
+          растаять в пути и позволяет ему сохранить
+          свой превосходный вкус.
+        </div>
+      </section>
+      <div class="new-in-blog">
+        <p>Новое в нашем блоге</p>
+        <a href="#">10 способов сервировки фруктовых щербетов к столу</a>
+      </div>
+      <div class="subscribe">
+        <p>Подпишитесь на нашу сладкую рассылку
+        и будете всегда в курсе всего самого вкусного,
+        что у нас происходит. Обещаем не спамить и не
+        слать всякой не нужной ерунды. Честно =)
+        </p>
+        <input class="form" type="email" name="email" placeholder="Электронная почта">
+        <input class="btn" type="subscribe" name="subscribe" value="Отправить">
+      </div>
+      <section class="location">
+        <!-- для мороженки сделать псевдо с абсолютным позиционированием -->
+        <div class="adress">
+          <p>Адрес главного офиса и онлайн магазина:<br>
+          <b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b><br>
+          <br>
+          Для заказов по телефону:
+          <b>8 812 450-25-25</b><br>
+          (с 10 до 20 ежедневно)</p>
+          <a class="btn" href="#">Форма обратной связи</a>
+        </div>
+      </section>
+    </main>
+      <footer>
+        <section class="footer-social">
+          <a class="social-btn social-btn-twet" href="#">Твиттер</a>
+          <a class="social-btn social-btn-inst" href="#">Инстаграм</a>
+          <a class="social-btn social-btn-fb" href="#">Фейсбук</a>
+          <a class="social-btn social-btn-vk" href="#">Вконтакте</a>
+        </section>
+        <section class="refs">
+          <a href="#">Для поставщиков</a>
+          <a href="#">Наши документы</a>
+          <a href="#">О производстве</a>
+          <a href="#">Экологические стандарты</a>
+        </section>
+        <section class="copyright">
+          <img src="http://placehold.it/50x50" width="50" height="50" alt="HTML Academy">
+          <p>Сделано в </p>
+          <a href="#">HTML Academy</a>
+          <p>&#169 2016</p>
+        </section>
+      </footer>
 
   </body>
 </html>
