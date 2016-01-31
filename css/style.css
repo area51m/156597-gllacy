@@ -1,0 +1,245 @@
+html, body {
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 22px;
+  text-align: center;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-width: 900px;
+  max-width: 1200px;
+  background-color: #489d8f;
+  padding: 0 10px;
+  z-index: -100;
+}
+
+body, footer, main {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+ul {
+	list-style: none;
+}
+.catalog {
+	font-size: 0;
+}
+
+.main-navigation a {
+	text-decoration: none;
+	color: white;
+}
+
+.main-navigation ul a:not(first-child) {
+	border-bottom: 1px dotted white;
+}
+
+.form,
+.item .btn {
+	display: none;
+}
+
+.main-header {
+	width: 100%;
+	border: 2px dashed red;
+}
+
+.main-navigation img,
+.main-navigation a,
+.index-content-left,
+.nav-btns,
+.new-in-blog {
+	float: left;
+	margin-right: 20px;
+}
+
+.index-content-right,
+.work-time-block,
+.subscribe {
+	float: right;
+
+}
+
+.nav-btns {
+	width: 25px;
+	height: 25px;
+    border-radius: 50%;
+    margin-right: 5px;
+    border: 2px solid white;
+}
+
+.search-btn {
+
+}
+
+.user-block {
+	width: 80px;
+	border-radius: 25px;
+}
+
+.cart {
+	width: 100px;
+	border-radius: 25px;
+}
+
+.work-time-block,
+.paginator {
+	text-align: right;
+}
+
+.adv-block {
+	width: 100%;
+	height: 600px;
+	border: 2px dashed yellow;
+	background: url("../img/2-ice-creams1200.png") no-repeat 50% -50px;
+	vertical-align: bottom;
+}
+
+.btn {
+	display: block;
+	padding: 0;
+	vertical-align: middle;
+	text-align: center;
+	height: 40px;
+	width: 150px;
+	border-radius: 20px;
+	background-color: #EE1E17;
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.index-content,
+.combo-info {
+	border: 2px dashed black;
+}
+
+.index-content-left,
+.index-content-right,
+.new-in-blog,
+.subscribe {
+	width: 40%;
+}
+
+.item {
+	display: inline-block;
+	height: 200px;
+	width: 22%;
+	border: 2px solid grey;
+	font-size: 16px;
+}
+
+.about p {
+	display: inline-block;
+	width: 30%;
+	height: 100px;
+	text-align: left;
+	margin-right: 60px;
+}
+.about {
+  background: url('../img/wafer.jpg') no-repeat;
+}
+
+.location {
+	width: 100%;
+  padding: 60px 0;
+	height: 310px;
+	background: url("../img/map-bg.jpg") no-repeat 50% 50%;
+
+}
+
+.adress {
+	width: 305px;
+	height: 305px;
+	margin-left: 60%;
+	background-color: white;
+	border-radius: 25px;
+	color: black;
+	padding: 20px;
+	text-align: left;
+}
+
+footer {
+	height: 300px;
+	width: 100%;
+	font-size: 13px;
+  margin-top: 20px;
+}
+
+.footer-social,
+.refs,
+.copyright {
+	display: inline-block;
+	width: 30%;
+	height: 100%
+}
+
+.copyright {
+  font-size: 12px;
+	text-align: left;
+}
+
+.refs-left,
+.refs-right {
+	display: inline-block;
+	width: 45%
+}
+
+.refs-left a,
+.refs-right a,
+.copyright a {
+	color: white;
+	text-decoration: none;
+	border-bottom: 1px dotted white;
+}
+
+.bread-crumbs,
+h2 {
+	text-align: left;
+	margin-left: 10px;
+	padding: 0;
+}
+
+.bread-crumbs li,
+.filter label,
+.range-controls,
+.fat,
+.filler,
+.filter-btn,
+.paginator li {
+	display: inline-block;
+}
+
+.bread-crumbs li a {
+	color: white;
+	text-decoration: none;
+}
+
+.filter {
+	text-align: left;
+	max-width: 900px;
+}
+.cream {
+  background: url('../img/cream.png') no-repeat;
+}
+.cream-coffee {
+  background: url('../img/cream-coffee.png') no-repeat;
+}
+.cream-berry {
+  background: url('../img/cream-berry.png') no-repeat;
+}
+.cream-brulee {
+  background: url('../img/cream-brulee.png') no-repeat;
+}

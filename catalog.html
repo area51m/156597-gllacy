@@ -3,11 +3,16 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
+    <link rel="stylesheet" type="text/css" href="css/normalise.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- Шрифт подключен по рекомендации наставника -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700,300&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
   </head>
+
   <body>
-    <header class="main-header">
+    <header class="main-header clearfix">
       <nav class="main-navigation">
-        <img src="http://placehold.it/100x50" width="100" height="50" alt="Gllacy Shop">
+        <a href="#"><img src="img/logo.png" width="155" height="70" alt="Gllacy Shop"></a>
         <ul>
         <li><a href="#" class="btn">Каталог</a></li>
         <li><a href="#">Доставка и оплата</a></li>
@@ -15,9 +20,11 @@
         </ul>
       </nav>
         <div class="nav-btns serch-btn">
-          <input type="search" name="search-request" class="form search-form" placeholder="Что ищем?">
+          <form class="form search-form">
+            <input type="search" name="search-request" class="form search-form" placeholder="Что ищем?">
+          </form>
         </div>
-        <div class="nav-btns user-block">
+        <div class="nav-btns user-block"><span>Вход</span>
           <form class="form user-form" method="post">
             <input type="email" name="email" placeholder="Электронная почта">
             <input type="password" name="password" placeholder="Пароль">
@@ -26,25 +33,39 @@
             <a href="#">Новая регистрация</a>
           </form>
         </div>
-        <div class="nav-btns cart">
-          <div class="form order=list"
-            <!-- СПИСОК ЗАКАЗА! КАК ЕГО ДЕЛАТЬ? -->
-            <a class="btn order-btn" href="#">Оформить заказ</a>
+        <div class="nav-btns cart"><span>Пусто</span>
+          <div class="form order-list">
+            <div class="oder-list-raw">
+              <div class="del"></div>
+              <div class="item-bg"></div>
+              <p>Пломбир с апельсиновым джемом</p>
+              <span>1,5 кг. х 200 руб.</span>
+              <span>300 руб.</span>
+            </div>
+            <div class="oder-list-raw">
+              <div class="del"></div>
+              <div class="item-bg"></div>
+              <p>Клубничный пломбир с пирсыпкой из белого шоколада</p>
+              <span>1,5 кг. х 300 руб.</span>
+              <span>450 руб.</span>
+            </div>
+          <div class="summary">Итого: 750 руб.</div>
+          <a class="btn order-btn" href="#">Оформить заказ</a>
           </div>
         </div>
-        <div class="work-time-block">
-          <p class="work-time">С 10 до 20, ежедневно</p>
-          <p class="work-phone">8 812 450-25-25</p>
-        </div>
       </header>
+      <div class="work-time-block">
+        <p class="work-time">С 10 до 20, ежедневно</p>
+        <p class="work-phone">8 812 450-25-25</p>
+      </div>
 
       <main>
-        <h2 class="product-group">Сливочное мороженое</h2>
         <ul class="bread-crumbs">
-          <li>Главная</li>
-          <li>Каталог</li>
+          <li><a href="#">Главная</a></li> >>
+          <li><a href="#">Каталог</a></li> >>
           <li>Сливочное</li>
         </ul>
+        <h2 class="product-group">Сливочное мороженое</h2>
         <form class="filter">
           <label>Сортировка:<br>
             <select class="filter-item selection-range" name="preference">
@@ -52,7 +73,7 @@
             </select>
           </label>
           <div class="range-controls">
-            <div>Цена:
+            <div>Цена:<br>
             <input type="text" name="min-price" value="100"> руб. -
             <input type="text" name="max-price" value="500"> руб.
             </div>
@@ -83,7 +104,7 @@
               <label><input type="checkbox" name="filler" value="jam"> джемы</label>
             </div>
           </div>
-          <a href="#" class="btn filter-btn">Применить</a>
+          <input href="#" type="submit" class="btn filter-btn" value="Применить">
         </form>
         <section class="catalog">
           <div class="item cream">
@@ -149,15 +170,15 @@
             <a href="#" class="btn cream-mint-btn">Быстрый просмотр</a>
           </div>
         </section>
-        <div class="paginator">
-          <a href="#prev">Назад</a>
-          <a href="#1">1</a>
-          <a href="#2">2</a>
-          <a href="#3">3</a>
-          <a href="#4">4</a>
-          <a href="#5">5</a>
-          <a href="#next">Вперед</a>
-        </div>
+        <ul class="paginator">
+          <li><a href="#prev">Назад</a></li>
+          <li><a href="#1">1</a></li>
+          <li><a href="#2">2</a></li>
+          <li><a href="#3">3</a></li>
+          <li><a href="#4">4</a></li>
+          <li><a href="#5">5</a></li>
+          <li><a href="#next">Вперед</a></li>
+        </ul>
       </main>
 
       <footer>
@@ -168,16 +189,18 @@
           <a class="social-btn social-btn-vk" href="#">Вконтакте</a>
         </section>
         <section class="refs">
-          <a href="#">Для поставщиков</a>
-          <a href="#">Наши документы</a>
-          <a href="#">О производстве</a>
-          <a href="#">Экологические стандарты</a>
+          <div class="refs-left">
+            <a href="#">Для поставщиков</a><br>
+            <a href="#">Наши документы</a>
+          </div>
+          <div class="refs-right">
+            <a href="#">О производстве</a><br>
+            <a href="#">Экологические стандарты</a>
+          </div>
         </section>
         <section class="copyright">
-          <img src="http://placehold.it/50x50" width="50" height="50" alt="HTML Academy">
-          <p>Сделано в </p>
-          <a href="#">HTML Academy</a>
-          <p>&#169 2016</p>
+          <img src="img/ha-logo.svg" width="150" height="50" alt="HTML Academy">
+          <p>Сделано в <a href="#">HTML Academy</a> &#169 2016</p>
         </section>
       </footer>
   </body>
