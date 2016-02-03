@@ -13,7 +13,7 @@ body {
   min-width: 900px;
   max-width: 1200px;
   background-color: #489d8f;
-  padding: 0 10px;
+  padding: 20px;
   z-index: -100;
 }
 
@@ -38,6 +38,8 @@ ul {
 .main-navigation a {
 	text-decoration: none;
 	color: white;
+  margin-left: 30px;
+  border: 2px solid red;
 }
 
 .main-navigation ul a:not(first-child) {
@@ -51,13 +53,13 @@ ul {
 
 .main-header {
 	width: 100%;
+  height: 65px;
 	border: 2px dashed red;
 }
 
 .main-navigation img,
 .main-navigation a,
 .index-content-left,
-.nav-btns,
 .new-in-blog {
 	float: left;
 	margin-right: 20px;
@@ -65,21 +67,29 @@ ul {
 
 .index-content-right,
 .work-time-block,
-.subscribe {
+.nav-btns,
+.subscribe,
+.index-content-left-btn,
+.index-content-right-btn {
 	float: right;
 
 }
 
 .nav-btns {
-	width: 25px;
-	height: 25px;
-    border-radius: 50%;
-    margin-right: 5px;
-    border: 2px solid white;
+  display: inline-block;
+  vertical-align: middle;
+  border: 2px dashed red;
 }
 
-.search-btn {
-
+.search-btn,
+.user-block,
+.cart {
+  display: inline-block;
+	width: 25px;
+	height: 25px;
+  border-radius: 50%;
+  margin-right: 10px;
+  border: 2px solid white;
 }
 
 .user-block {
@@ -99,21 +109,24 @@ ul {
 
 .adv-block {
 	width: 100%;
-	height: 600px;
+	min-height: 600px;
 	border: 2px dashed yellow;
 	background: url("../img/2-ice-creams1200.png") no-repeat 50% -50px;
 	vertical-align: bottom;
 }
 
+/*ОБЩЕЕ ПО КНОПКАМ*/
 .btn {
-	display: block;
-	padding: 0;
+	display: inline-block;
 	vertical-align: middle;
 	text-align: center;
-	height: 40px;
-	width: 150px;
+	height: 45px;
+  line-height: 45px;
+	min-width: 130px;
 	border-radius: 20px;
-	background-color: #EE1E17;
+  padding-left: 15px;
+  padding-right: 15px;
+	background-image: linear-gradient(to top, #e74b36, #f26843);
 	color: white;
 	text-decoration: none;
 	font-weight: bold;
@@ -121,36 +134,153 @@ ul {
 	margin-right: auto;
 }
 
-.index-content,
-.combo-info {
-	border: 2px dashed black;
-}
-
+/*ИНДЕКС КОТНТЕНТ - НАЧАЛО*/
 .index-content-left,
 .index-content-right,
 .new-in-blog,
 .subscribe {
 	width: 40%;
+  border-radius: 20px;
+  min-height: 220px;
+  padding: 20px;
+  font-size: 18px;
+  text-align: left;
+  margin-top: 20px;
+  margin-bottom: 40px;
 }
+.index-content-left h2,
+.index-content-right h2 {
+  font-size: 35px;
+}
+.index-content-left-btn,
+.index-content-right-btn {
+  text-align: right;
+}
+.index-content-left {
+  background: url('../img/berry.jpg') no-repeat 50% 50%;
+}
+.index-content-right {
+  background: url('../img/choko-bg.jpg') no-repeat 50% 50%;
+}
+/*ИНДЕКС КОТНТЕНТ - КОНЕЦ*/
 
+/*ПО БЛОКАМ С ТОВАРОМ - НАЧАЛО*/
 .item {
+  position: relative;
 	display: inline-block;
-	height: 200px;
+	min-height: 300px;
 	width: 22%;
-	border: 2px solid grey;
 	font-size: 16px;
+  text-align: center;
+  margin-right: 10px;
 }
+.item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.item b {
+  position: absolute;;
+  top: 60%;
+  left: 0px;
+  font-size: 30px;
+  text-shadow: 2px 2px 5px grey;
+}
+.item b span {
+  font-size: 45px;
+}
+.item p {
+  font-weight: normal;
+  text-decoration: underline;
+}
+.hits .item::before {
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-image: url('../img/hit.png');
+  top: 0;
+  left: 0;
+}
+/*ПО БЛОКАМ С ТОВАРОМ - КОНЕЦ*/
 
-.about p {
-	display: inline-block;
-	width: 30%;
-	height: 100px;
-	text-align: left;
-	margin-right: 60px;
-}
+/*БЛОК ОБЩЕЙ ИНФОРМАЦИИ О ПРОИЗВОДСТВЕ*/
 .about {
-  background: url('../img/wafer.jpg') no-repeat;
+  background: url('../img/wafer.jpg') repeat 50% 50%;
+  width: 100%;
+  margin-top: 30px;
+  padding: 5px 25px 25px 25px;
+  min-height: 250px;
+  color: black;
+  border-radius: 25px;
+  text-align: left;
 }
+.about p {
+  position: relative;
+	display: inline-block;
+	width: 40%;
+  vertical-align: top;
+	min-height: 100px;
+	text-align: left;
+	margin-right: 20px;
+  padding-left: 60px;
+  font-weight: normal;
+}
+.about h4 {
+  font-size: 24px;
+}
+.about::before {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 0;
+  left: 0;
+}
+.ice {
+  background: url('../img/ice-cream.svg') no-repeat;
+}
+.cow {
+  background: url('../img/cow.svg') no-repeat;
+}
+.leaf {
+  background: url('../img/leaf.svg') no-repeat;
+}
+.temperature {
+  background: url('../img/temperature.svg') no-repeat;
+}
+/*БЛОК ОБЩЕЙ ИНФОРМАЦИИ О ПРОИЗВОДСТВЕ*/
+
+/*БЛОК НОВОСТЕЙ И ПОДПИСКИ*/
+.new-in-blog,
+.subscribe {
+  color: #5a5a5a;
+  border-radius: 25px;
+  width: 44%;
+  min-height: 220px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 16px;
+  font-weight: 500;
+}
+.new-in-blog {
+  background: url('../img/sweet-bg.jpg') 0px -220px no-repeat white;
+}
+.new-in-blog a {
+  font-weight: bold;
+  color: black;
+  font-size: 24px;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+.subscribe {
+  background: url('../img/mail-pattern.png') white;
+}
+.patch {
+  border-radius: 25px;
+  background-color: #f8f7f4;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+/*БЛОК НОВОСТЕЙ И ПОДПИСКИ*/
 
 .location {
 	width: 100%;
@@ -172,7 +302,7 @@ ul {
 }
 
 footer {
-	height: 300px;
+	min-height: 80px;
 	width: 100%;
 	font-size: 13px;
   margin-top: 20px;
@@ -230,16 +360,4 @@ h2 {
 .filter {
 	text-align: left;
 	max-width: 900px;
-}
-.cream {
-  background: url('../img/cream.png') no-repeat;
-}
-.cream-coffee {
-  background: url('../img/cream-coffee.png') no-repeat;
-}
-.cream-berry {
-  background: url('../img/cream-berry.png') no-repeat;
-}
-.cream-brulee {
-  background: url('../img/cream-brulee.png') no-repeat;
 }

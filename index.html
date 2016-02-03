@@ -19,12 +19,13 @@
         <li><a href="#">О компании</a></li>
         </ul>
       </nav>
-        <div class="nav-btns serch-btn">
+      <div class="nav-btns">
+        <div class="search-btn">
           <form class="form search-form">
             <input type="search" name="search-request" class="form search-form" placeholder="Что ищем?">
           </form>
         </div>
-        <div class="nav-btns user-block"><span>Вход</span>
+        <div class="user-block"><span>Вход</span>
           <form class="form user-form" method="post">
             <input type="email" name="email" placeholder="Электронная почта">
             <input type="password" name="password" placeholder="Пароль">
@@ -33,7 +34,7 @@
             <a href="#">Новая регистрация</a>
           </form>
         </div>
-        <div class="nav-btns cart"><span>Пусто</span>
+        <div class="cart"><span>Пусто</span>
           <div class="form order-list">
             <div class="oder-list-raw">
               <div class="del"></div>
@@ -53,6 +54,7 @@
           <a class="btn order-btn" href="#">Оформить заказ</a>
           </div>
         </div>
+      </div>
 
       </header>
         <div class="work-time-block">
@@ -86,21 +88,25 @@
       </div>
       <section class="hits clearfix">
         <div class="item cream">
+          <img src="img/cream.png" height="200" width="200" alt="Фотография мороженного">
           <b><span>320 &#8381</span>/кг</b>
           <p>Сливочное с апельсиновым джемом и циторусовой стружкой</p>
           <a href="#" class="btn cream-btn">Быстрый просмотр</a>
         </div>
         <div class="item cream-coffee">
+          <img src="img/cream-coffee.png" height="200" width="200" alt="Фотография мороженного">
           <b><span>380 &#8381</span>/кг</b>
           <p>Сливочно-кофейное с кусочками шоколада</p>
           <a href="#" class="btn cream-coffee-btn">Быстрый просмотр</a>
         </div>
         <div class="item cream-berry">
+          <img src="img/cream-berry.png" height="200" width="200" alt="Фотография мороженного">
           <b><span>355 &#8381</span>/кг</b>
           <p>Сливочно-клубничное с присыпкой из белого шоколада</p>
           <a href="#" class="btn cream-berry-btn">Быстрый просмотр</a>
         </div>
         <div class="item cream-brulee">
+          <img src="img/cream-brulee.png" height="200" width="200" alt="Фотография мороженного">
           <b><span>415 &#8381</span>/кг</b>
           <p>Сливочное крем-брюле с карамельной подливкой</p>
           <a href="#" class="btn cream-brulee-btn">Быстрый просмотр</a>
@@ -143,13 +149,15 @@
         <a href="#">10 способов сервировки фруктовых щербетов к столу</a>
       </div>
       <div class="subscribe">
+        <div class="patch">
         <p>Подпишитесь на нашу сладкую рассылку
         и будете всегда в курсе всего самого вкусного,
         что у нас происходит. Обещаем не спамить и не
         слать всякой не нужной ерунды. Честно =)
         </p>
-        <input class="form" type="email" name="email" placeholder="Электронная почта">
+        <input class="email" type="email" name="email" placeholder="Электронная почта">
         <input class="btn" type="submit" name="submit" value="Отправить">
+      </div>
       </div>
       </section>
       <section class="location">
