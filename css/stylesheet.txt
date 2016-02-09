@@ -1,0 +1,77 @@
+.sprite {
+    background-image: url(spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-cart {
+    width: 21px;
+    height: 20px;
+    background-position: -10px -10px;
+}
+
+.sprite-cart-full {
+    width: 21px;
+    height: 20px;
+    background-position: -10px -50px;
+}
+
+.sprite-enter {
+    width: 20px;
+    height: 19px;
+    background-position: -10px -90px;
+}
+
+.sprite-enter-hover {
+    width: 20px;
+    height: 19px;
+    background-position: -10px -129px;
+}
+
+.sprite-fb {
+    width: 31px;
+    height: 31px;
+    background-position: -10px -168px;
+}
+
+.sprite-heart {
+    width: 15px;
+    height: 13px;
+    background-position: -10px -219px;
+}
+
+.sprite-inst {
+    width: 31px;
+    height: 31px;
+    background-position: -10px -252px;
+}
+
+.sprite-loup {
+    width: 17px;
+    height: 17px;
+    background-position: -10px -303px;
+}
+
+.sprite-loup-hover {
+    width: 17px;
+    height: 17px;
+    background-position: -10px -340px;
+}
+
+.sprite-tw {
+    width: 31px;
+    height: 31px;
+    background-position: -10px -377px;
+}
+
+.sprite-vk {
+    width: 31px;
+    height: 31px;
+    background-position: -10px -428px;
+}
+
+.sprite-x {
+    width: 10px;
+    height: 10px;
+    background-position: -10px -479px;
+}
