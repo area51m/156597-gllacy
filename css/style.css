@@ -11,14 +11,17 @@ html, body {
 
 body {
   min-width: 900px;
-  max-width: 1150px;
-  background-color: #849d8f;
-  padding: 5px 25px;
+  max-width: 1200px;
+  /*background-color: #849d8f;*/
   margin-left: auto;
   margin-right: auto;
 }
+.catalog-body {
+  background-color: #849d8f;
+}
 
 header, footer, main {
+  /*padding: 0 25px;*/
   margin-left: auto;
   margin-right: auto;
 }
@@ -117,6 +120,7 @@ li {
 }
 .work-time-block .work-phone {
   font-size: 22px;
+  line-height: 35px;
 }
 
 /*ВЫПАДАЮЩАЯ МЕНЮХА*/
@@ -148,7 +152,7 @@ li {
   width: 145px;
   min-height: 100px;
   background-color: white;
-  top: 22px;
+  top: 25px;
   left: -20px;
   border-radius: 5px;
   padding: 0;
@@ -159,10 +163,10 @@ li {
 }
 .sub-menu-1 li {
   text-align: left;
-  width: 120px;
+  width: 130px;
   height: 35px;
   margin: 0;
-  padding-left: 25px;
+  padding-left: 20px !important;
   color: black;
   text-decoration: none;
   font-weight: normal;
@@ -170,6 +174,7 @@ li {
   line-height: 35px;
 }
 .sub-menu-1 li a {
+  font-size: 14px;
   color: black;
   border: none;
   text-decoration: none;
@@ -197,38 +202,38 @@ li {
   border-radius: 25px;
   font-size: 14px;
   font-weight: normal;
-	width: 35px;
-	height: 35px;
-  line-height: 35px;
-  margin-right: 10px;
-  text-align: right;
-  padding-right: 15px;
+	width: 32px;
+	height: 32px;
+  line-height: 32px;
+  margin-right: 5px;
+  text-align: left;
+  padding: 0;
 }
 .search-btn {
-  padding: 0px;
-  background: rgba(255, 255, 255, 0.4) url('../img/sprite.png') no-repeat 0px -295px;
+  background: rgba(255, 255, 255, 0.4) url('../img/sprite.png') no-repeat -2px -295px;
 }
 .search-btn:hover {
-  background: rgba(255, 255, 255, 1) url('../img/sprite.png') no-repeat 0px -332px;
+  background: rgba(255, 255, 255, 1) url('../img/sprite.png') no-repeat -2px -333px;
 }
 .search-btn:hover .search-form {
   display: block;
 }
 .user-block {
-	width: 80px;
-  background: rgba(255, 255, 255, 0.4) url('../img/sprite.png') no-repeat 5px -82px;
+	width: 48px;
+  padding-left: 44px;
+  background: rgba(255, 255, 255, 0.4) url('../img/sprite.png') no-repeat 5px -84px;
 }
 .user-block:hover .user-form {
   display: block;
 }
 .user-block:hover {
-   background: rgba(255, 255, 255, 1) url('../img/sprite.png') no-repeat 5px -121px;
+   background: rgba(255, 255, 255, 1) url('../img/sprite.png') no-repeat 5px -122px;
    color: black;
 }
 .cart {
-	width: 90px;
+	width: 72px;
   margin-right: 0;
-  padding-right: 30px;
+  padding-left: 45px;
   background: rgba(255, 255, 255, 0.4) url('../img/sprite.png') no-repeat 5px -3px;
 }
 .cart:hover {
@@ -239,7 +244,7 @@ li {
   display: block;
 }
 .search-form {
-  top: 35px;
+  top: 32px;
   right: 0;
   width: 240px;
   height: 40px;
@@ -258,7 +263,7 @@ li {
   height: 160px;
   padding: 20px 5px 15px 15px;
   right: 0;
-  top: 35px;
+  top: 32px;
   text-align: left;
   z-index: 100;
 }
@@ -344,6 +349,7 @@ li {
   border-bottom: 1px solid black;
 }
 .summary {
+  text-align: right;
   font-weight: bold;
   font-size: 15px;
   margin: 10px 20px 10px 20px;
@@ -364,7 +370,6 @@ li {
 	width: 100%;
 	min-height: 550px;
   margin: 0;
-  margin-bottom: 40px;
   padding: 0;
 	font-size: 18px;
   line-height: 1.2;
@@ -376,7 +381,7 @@ li {
 	display: inline-block;
 	vertical-align: top;
 	text-align: center;
-	height: 45px;
+	min-height: 45px;
   line-height: 45px;
 	min-width: 130px;
 	border-radius: 20px;
@@ -411,6 +416,9 @@ li {
   box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
 }
 /*ИНДЕКС КОТНТЕНТ - НАЧАЛО*/
+.index-content {
+  padding: 0 25px;
+}
 .index-content-left,
 .index-content-right,
 .new-in-blog,
@@ -420,7 +428,7 @@ li {
   padding: 25px 20px;
   min-height: 180px;
   max-width: 520px;
-  min-width: 380px;
+  min-width: 370px;
   font-size: 18px;
   text-align: left;
   margin-bottom: 40px;
@@ -435,7 +443,7 @@ li {
 }
 .index-content-left {
   background: url('../img/berry.jpg') no-repeat 50% 50%;
-  margin-right: 0;
+  margin-right: 2.2%;
 }
 .index-content-right {
   background: url('../img/choko-bg.jpg') no-repeat 50% 50%;
@@ -445,23 +453,33 @@ li {
 /*ПО БЛОКАМ С ТОВАРОМ - НАЧАЛО*/
 .hits {
   font-size: 0;
-  width: 100%;
+  max-width: 1160px;
+  min-width: 860px;
   margin: 0;
-  padding: 0;
+  padding: 0 20px;
+}
+.item-fix {
+  display: inline-block;
+  vertical-align: top;
+  width: 21%;
+  padding: 10px;
+  min-height: 200px;
+  margin-right: 2.2%;
+  border-radius: 5px;
 }
 .item {
   position: relative;
-	display: inline-block;
-  vertical-align: top;
-  min-height: 400px;
-	width: 22%;
+	
+  margin: 0;
+  padding: 0;
+	width: 100%;
 	font-size: 16px;
   text-align: center;
-  margin-right: 1%;
-  border-radius: 5px;
-  padding: 10px;
+  
+  
+  
 }
-.item:nth-child(4n) {
+.item-fix:nth-child(4n) {
   margin-right: auto;
 }
 .item img {
@@ -471,7 +489,7 @@ li {
 }
 .item b {
   position: absolute;
-  bottom: 200px;
+  top: 160px;
   left: 10px;
   font-size: 30px;
   text-shadow: 2px 2px 5px grey;
@@ -480,6 +498,7 @@ li {
   font-size: 45px;
 }
 .item p {
+  margin-bottom: 0;
   font-weight: normal;
   text-decoration: underline;
 }
@@ -492,10 +511,29 @@ li {
   top: 0;
   left: 0;
 }
-.item:hover {
-  background-color: rgba(255,255,255, 0.2);
+.item .and-btn {
+  display: none;
+  content: '';
+  position: absolute;
+  width: 100%;
+  min-height: 70px;
+  background-color: rgba(255,255,255, 0.3);
+  top: 100%;
+  left: 0;
+  border-radius: 0 0 5px 5px;
+  z-index: 100;
 }
-.item:hover .btn {
+.item .btn {
+  display: block;
+  font-size: 15px;
+  width: 80%;
+  margin-top: 10px;
+}
+.item:hover {
+  background-color: rgba(255,255,255, 0.3);
+  border-radius: 5px 5px 0 0;
+}
+.item:hover .and-btn {
   display: block;
 }
 .item:hover p {
@@ -505,12 +543,18 @@ li {
 
 /*БЛОК ОБЩЕЙ ИНФОРМАЦИИ О ПРОИЗВОДСТВЕ*/
 .about {
-  background: url('../img/wafer.jpg') repeat 50% 50%;
+  
   min-width: 850px;
   margin-top: 30px;
   margin-bottom: 40px;
-  padding: 5px 5px 25px 25px;
+  padding-left: 20px;
+  padding-right: 20px;
   min-height: 250px;
+  
+}
+.about div {
+  background: url('../img/wafer.jpg') repeat 50% 50%;
+  padding: 30px 25px 25px 25px;
   color: black;
   border-radius: 25px;
   text-align: left;
@@ -519,15 +563,20 @@ li {
   position: relative;
 	display: inline-block;
   vertical-align: top;
-	width: 40%;
+	width: 41%;
  	min-height: 100px;
 	text-align: left;
-	margin-right: 1%;
+	margin-right: 2.2%;
+  margin-bottom: 0;
   padding-left: 60px;
   font-weight: normal;
 }
+.about p:nth-child(odd) {
+  margin-right: 0;
+}
 .about h4 {
   font-size: 24px;
+  margin: 0;
 }
 .about::before {
   position: absolute;
@@ -552,7 +601,9 @@ li {
 
 /*БЛОК НОВОСТЕЙ И ПОДПИСКИ*/
 .combo-info {
-  margin-bottom: 20px;
+  margin-bottom: 40px;
+  padding: 0 20px 0 20px;
+  min-height: 220px;
 }
 .new-in-blog,
 .subscribe {
@@ -564,6 +615,7 @@ li {
   padding-right: 20px;
   font-size: 16px;
   font-weight: 500;
+  margin: 0;
 }
 .new-in-blog {
   background: url('../img/sweet-bg.jpg') 30% -220px no-repeat white;
@@ -583,6 +635,12 @@ li {
   height: 1px;
   padding: 10px;
 }
+.subscribe input[type="email"] {
+  padding-left: 10px;
+  font-size: 16px;
+  font-weight: normal;
+  height: 44px;
+}
 .patch {
   height: 100%;
   border-radius: 25px;
@@ -593,7 +651,7 @@ li {
  }
  .patch .email {
    height: 45px;
-   width: 58%;
+   width: 55%;
    border-radius: 5px;
    font-size: 16px;
    font-weight: normal;
@@ -611,7 +669,7 @@ li {
 	width: 100%;
   padding: 60px 0;
 	min-height: 310px;
-	background: url("../img/map-bg.jpg") no-repeat 50% 50%;
+  background: url("../img/map-bg.jpg") no-repeat 50% 50%;
 }
 .adress {
 	width: 260px;
@@ -639,31 +697,140 @@ li {
 }
 
 /*ОБРАТНАЯ СВЯЗЬ*/
-.link-back {
+.link-back,
+.shade {
   display: none;
+  position: fixed; 
+}
+.shade {
+  top: 0;
+  left: 0;
+  content: ' ';
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10000;
+}
+.link-back {
+  width: 390px;
+  height: 430px;
+  top: 50%;
+  left: 50%;
+  background-color: #f8f7f4;
+  border-radius: 10px;
+  margin-left: -220px;
+  margin-top: -240px;
+  color: black;
+  padding: 25px;
+  text-align: left;
+  z-index: 11000;
+}
+.link-back .link-back-close {
+  position: absolute;
+  cursor: pointer;
+}
+.link-back::before,
+.link-back::after {
+  content: "";
+  position: absolute;
+  top: 20px;
+  right: 15px;
+  width: 19px;
+  height: 1px;
+  background-color: black;
+}
+.link-back::before {
+  transform: rotate(45deg);
+}
+
+.link-back::after {
+  transform: rotate(-45deg);
+}
+.link-back .link-back-close {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  top: 10px;
+  right: 14px;
+  border: none;
+  background-color: transparent;
+}
+.link-back input,
+.link-back textarea {
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  display: block;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 24.3px;
+}
+.link-back input[type="text"],
+.link-back input[type="email"] {
+  position: relative;
+  width: 237px;
+  height: 44px;
+  padding-left: 15px;
+  margin-bottom: 20px;
+}
+.link-back input:active {
+  border-color: #8fbdec;
+}
+.link-back textarea {
+  width: 348px;
+  height: 155px;
+  overflow: auto;
+  padding: 0 15px;
+  margin-bottom: 25px;
+}
+.link-back input[type="submit"] {
+  border: none;
+  float: right;
+  width: 140px;
+}
+.link-back label {
+  position: absolute;
+  font-size: 11px;
+  font-weight: normal;
+  display: none;
+}
+.link-back input[type="text"]:focus + label {
+  display: block;
+  top: 48px;
+  left: 40px;
+  color: #8fbdec;
+}
+.link-back input[type="email"]:focus + label {
+  display: block;
+  top: 118px;
+  left: 40px;
+  color: #8fbdec;
+}
+.link-back-show,
+.shade-show {
+  display: block;
 }
 /*ОБРАТНАЯ СВЯЗЬ*/
 
 /*ФУТЕР*/
 footer {
-	min-height: 80px;
+	min-height: 100px;
 	width: 100%;
 	font-size: 13px;
   font-weight: normal;
-  margin-top: 20px;
+  padding: 0 20px 10px 20px;
 }
 .footer-social,
 .refs,
 .copyright {
 	display: inline-block;
   vertical-align: top;
-  margin-top: 15px;
-	width: 30%;
+  margin-top: 20px;
 	height: 100%;
+  padding-right: 1px;
 }
 .footer-social {
   padding: 0;
-  margin-right: 0;
+  margin-right: 5%;
+  min-width: 200px;
 }
 .social-btn {
   display: inline-block;
@@ -693,15 +860,19 @@ footer {
 }
 
 .refs {
-  width: 40%;
+  width: 350px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 20px;
 }
 .copyright {
+  width: 200px;
   font-size: 12px;
 	text-align: left;
-  width: 22%;
+  padding-right: 40px;
+}
+.copyright p {
+  margin: 0;
 }
 .refs-left,
 .refs-right {
@@ -730,7 +901,7 @@ footer {
   content: '';
   position: absolute;
   top: 0;
-  left: 15%;
+  left: 15px;
   display: inline-block;
   vertical-align: top;
   width: 15px;
@@ -749,6 +920,8 @@ footer {
   pointer-events: none;
   background-color: #d07058;
   border-radius: 25px;
+  height: 25px;
+  width: 85px;
 }
 
 /*КРОШКИ И ФИЛЬТР*/
@@ -914,6 +1087,7 @@ input[name="filler"]:checked + label::before {
   width: 140px;
   height: 36px;
   line-height: 36px;
+  border-radius: 25px;
   background-image: none;
   background-color: rgba(255, 255, 255, 0.3);
   color: white;
@@ -954,11 +1128,23 @@ input[name="filler"]:checked + label::before {
 .paginator .paginator-page-active{
   color: black;
   background-color: white;
+  pointer-events: none;
 }
 .paginator a:hover {
   background-color: rgba(255, 255, 255, 0.3);
 }
 /*ПАГИНАТОР*/
+
+/*ПО ИНПУТАМ*/
+input,
+textarea {
+  border: 2px solid #d3d3d2
+}
+input:hover,
+textarea:hover {
+  border: 2px solid #c7c6c5;
+}
+/*ПО ИНПУТАМ*/
 
 /*СЛАЙДЕР*/
 .adv-block > input[type="radio"] {
@@ -966,6 +1152,7 @@ input[name="filler"]:checked + label::before {
 }
 
 .site-wrapper {
+  padding-top: 5px;
 /*  min-width: 940px;
   min-height: 100vh; /* для демо */
   background-repeat: no-repeat;
@@ -995,7 +1182,7 @@ input[name="filler"]:checked + label::before {
   min-width: 860px;
   margin: 0 auto;
   margin-bottom: 40px;
-  /*padding: 0 20px;*/
+  padding: 0 20px;
 }
 
 /*.main-header {
@@ -1008,7 +1195,7 @@ input[name="filler"]:checked + label::before {
 
 .slider {
   position: relative;
-  padding-top: 330px;
+  padding-top: 315px;
   text-align: center;
   color: #ffffff;
 }
