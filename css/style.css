@@ -10,8 +10,7 @@ html, body {
 }
 
 body {
-  min-width: 900px;
-  max-width: 1200px;
+  
   /*background-color: #849d8f;*/
   margin-left: auto;
   margin-right: auto;
@@ -21,6 +20,8 @@ body {
 }
 
 header, footer, main {
+  min-width: 900px;
+  max-width: 1200px;
   /*padding: 0 25px;*/
   margin-left: auto;
   margin-right: auto;
@@ -52,7 +53,7 @@ li {
 }
 
 .main-navigation li > a {
-	border-bottom: 1px solid white;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.4);
 }
 
 .form,
@@ -84,7 +85,6 @@ li {
 .refs,
 .social-btn {
 	float: left;
-	margin-right: 20px;
 }
 .main-navigation img {
   margin-right: 15px;
@@ -252,8 +252,9 @@ li {
   z-index: 100;
 }
 .search-form input {
-  width: 240px;
+  width: 230px;
   height: 40px;
+  padding-left: 10px;
   margin: 0 auto;
   box-shadow: none;
   background-color: white;
@@ -417,7 +418,8 @@ li {
 }
 /*ИНДЕКС КОТНТЕНТ - НАЧАЛО*/
 .index-content {
-  padding: 0 25px;
+  margin: 0;
+  padding: 0 20px;
 }
 .index-content-left,
 .index-content-right,
@@ -433,20 +435,26 @@ li {
   text-align: left;
   margin-bottom: 40px;
 }
+.index-content-left,
+.index-content-right {
+  position: relative;
+}
 .index-content-left h2,
 .index-content-right h2 {
   font-size: 35px;
 }
-.index-content-left-btn,
-.index-content-right-btn {
-  text-align: right;
-}
+
 .index-content-left {
   background: url('../img/berry.jpg') no-repeat 50% 50%;
   margin-right: 2.2%;
 }
 .index-content-right {
   background: url('../img/choko-bg.jpg') no-repeat 50% 50%;
+}
+.index-content .btn {
+  position: absolute;
+  right: 25px;
+  bottom: 25px;
 }
 /*ИНДЕКС КОТНТЕНТ - КОНЕЦ*/
 
@@ -469,7 +477,7 @@ li {
 }
 .item {
   position: relative;
-	
+	top:10px;
   margin: 0;
   padding: 0;
 	width: 100%;
@@ -519,7 +527,8 @@ li {
   min-height: 70px;
   background-color: rgba(255,255,255, 0.3);
   top: 100%;
-  left: 0;
+  left: -10px;
+  padding: 0 10px;
   border-radius: 0 0 5px 5px;
   z-index: 100;
 }
@@ -529,7 +538,7 @@ li {
   width: 80%;
   margin-top: 10px;
 }
-.item:hover {
+.item-fix:hover {
   background-color: rgba(255,255,255, 0.3);
   border-radius: 5px 5px 0 0;
 }
@@ -633,7 +642,7 @@ li {
 .subscribe {
   background: url('../img/mail-pattern.png') white;
   height: 1px;
-  padding: 10px;
+  padding: 5px;
 }
 .subscribe input[type="email"] {
   padding-left: 10px;
@@ -657,8 +666,9 @@ li {
    font-weight: normal;
 }
  .patch .btn {
+  float: right;
    border: none;
-   margin-left: 10px;
+   margin-left: 7px;
    font-size: 17px;
    line-height: 24.3px;
    font-weight: bold;
@@ -813,23 +823,20 @@ li {
 /*ФУТЕР*/
 footer {
 	min-height: 100px;
-	width: 100%;
-	font-size: 13px;
+ 	font-size: 13px;
   font-weight: normal;
-  padding: 0 20px 10px 20px;
+  padding: 0 20px 0 20px;
 }
 .footer-social,
 .refs,
 .copyright {
 	display: inline-block;
-  vertical-align: top;
   margin-top: 20px;
-	height: 100%;
-  padding-right: 1px;
 }
 .footer-social {
   padding: 0;
-  margin-right: 5%;
+  margin-top: 30px;
+  margin-right: 13%;
   min-width: 200px;
 }
 .social-btn {
@@ -860,16 +867,14 @@ footer {
 }
 
 .refs {
+  margin: 0;
+  margin-top: 30px;
   width: 350px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 20px;
 }
 .copyright {
   width: 200px;
   font-size: 12px;
 	text-align: left;
-  padding-right: 40px;
 }
 .copyright p {
   margin: 0;
@@ -878,14 +883,14 @@ footer {
 .refs-right {
 	display: inline-block;
   vertical-align: top;
-	width: 45%;
+  text-align: left;
 }
 .refs-left a,
 .refs-right a,
 .copyright a {
 	color: white;
 	text-decoration: none;
-	border-bottom: 1px dotted white;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.4);
 }
 .copyright > a {
   border: none;
@@ -897,11 +902,14 @@ footer {
   position: relative;
   padding-left: 15px;
 }
+.refs-right {
+  padding-left: 30px;
+}
 .refs-left::before {
   content: '';
   position: absolute;
-  top: 0;
-  left: 15px;
+  top: -3px;
+  left: -3px;
   display: inline-block;
   vertical-align: top;
   width: 15px;
@@ -970,7 +978,11 @@ h2 {
   margin-bottom: 25px;
 }
 .selection-range {
+  -webkit-appearance: none;
+   -moz-appearance: none;
+    appearance: none;
   color: white;
+  outline: none;
   font-size: 16px;
   border-radius: 25px;
   height: 36px;
@@ -1094,6 +1106,7 @@ input[name="filler"]:checked + label::before {
   font-weight: normal;
   border: 1px solid white;
   margin-top: 21px;
+  outline: none;
  }
  .filter-btn:hover {
   color: black;
