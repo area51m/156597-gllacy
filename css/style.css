@@ -10,7 +10,16 @@ header, footer{ }
 
 ul{ list-style:none; display:inline-block;  margin:0;  padding:0}
 li{ margin-top:20px}
-.catalog{font-size:0}
+
+input, 
+textarea{ border:2px solid #d3d3d2;  outline:none}
+input:hover, 
+textarea:hover{ border:2px solid #c7c6c5}
+input:focus, 
+textarea:focus{ border:2px solid #8fbdec}
+
+.catalog{font-size:0;  padding:0 20px}
+.catalog .item-fix{ margin-bottom:40px}
 
 .main-navigation a{text-decoration:none; color:white;  margin:0}
 
@@ -31,7 +40,7 @@ li{ margin-top:20px}
 .footer-social, 
 .refs, 
 .social-btn{float:left}
-.main-navigation img{ margin-right:15px}
+.main-navigation img{ margin-right:20px}
 
 .main-navigation >ul >li:last-child, 
 .main-navigation >ul{ margin-right:0}
@@ -45,25 +54,33 @@ li{ margin-top:20px}
 .adress, 
 .copyright{float:right}
 
-.nav-btns{ padding-top:15px}
-.work-time-block{ margin-right:20px}
+.nav-btns{ padding-top:15px;  margin-right:10px}
+.work-time-block{ margin-right:25px}
 .work-time-block .work-time, 
 .work-time-block .work-phone{ margin:0}
 .work-time-block .work-time{ font-size:14px}
-.work-time-block .work-phone{ font-size:22px;  line-height:35px}
+.work-time-block .work-phone{ font-size:22px;  line-height:25px}
 
-.main-navigation ul li{ padding:5px 10px 5px 10px;  margin-right:10px}
+.main-navigation >ul li{ padding:5px 10px 5px 9px;  margin-right:10px;  margin-top:17px}
 .main-navigation ul a{ margin:0;  padding:0;  font-size:16px}
-.menu-item-1{ margin:0;  float:left;  margin-top:20px}
+.main-navigation >ul >li:hover{ background-color:white;  border-radius:25px}
+.main-navigation >ul >li:hover a{ color:black}
+.main-navigation >ul >li:active{ background-color:white;  border-radius:25px;  box-shadow:inset 0px 1px 1px 0 black}
+.main-navigation >ul >li:active a{ color:black}
+.menu-item-1{ margin:0;  float:left;  margin-top:17px}
 .bottom-plus:hover .menu-item-1{ background-color:white;  border-radius:25px}
 .bottom-plus:hover .menu-item-1 a{ color:black}
 .bottom-plus:hover .sub-menu-1{ display:block}
 .sub-menu-1{ position:absolute;   width:145px;  min-height:100px;  background-color:white;  top:60px;  left:-10px;  border-radius:5px;  padding:0;  margin:0;  overflow:hidden;  box-shadow:0 5px 15px 2px rgba(0,0,0,0.5);  z-index:100}
-.sub-menu-1 li{ text-align:left;  width:130px;  height:35px;  margin:0;  padding-left:20px !important;  color:black;  text-decoration:none;  font-weight:normal;  font-size:14px;  line-height:35px}
+.main-navigation .sub-menu-1 >li{ text-align:left;  width:130px;  height:35px;  margin:0;  padding-left:20px;  color:black;  text-decoration:none;  font-weight:normal;  font-size:14px;  line-height:35px}
 .sub-menu-1 li a{ font-size:14px;  color:black;  border:none;  text-decoration:none}
 .sub-menu-1 li:nth-child(1){ border-bottom:1px solid black;  font-weight:bold}
 .sub-menu-1 li:hover{ background-color:#fbded7}
+.sub-menu-1 li:hover a{ color:black}
 .sub-menu-1 li:active{ background-color:#f6b5a5}
+.sub-menu-1 li:active a{ color:black}
+.sub-menu-1 .menu-current-page{ background-color:#d07058}
+.sub-menu-1 .menu-current-page a{ color:white}
 
 .search-btn, 
 .user-block, 
@@ -74,7 +91,7 @@ li{ margin-top:20px}
 .user-block{width:48px;   padding-left:44px;   background:rgba(255,255,255,0.4) url('../img/sprite.png') no-repeat 5px -84px}
 .btn-plus-user:hover .user-form{  display:block}
 .btn-plus-user:hover .user-block{   background:rgba(255,255,255,1) url('../img/sprite.png') no-repeat 5px -122px;    color:black}
-.cart{width:72px;   margin-right:0;   padding-left:45px;   background:rgba(255,255,255,0.4) url('../img/sprite.png') no-repeat 5px -3px}
+.cart{width:70px;   margin-right:0;   padding-left:45px;   background:rgba(255,255,255,0.4) url('../img/sprite.png') no-repeat 5px -3px}
 .btn-plus-cart:hover .cart{  background:rgba(255,255,255,1) url('../img/sprite.png') no-repeat 5px -43px;   color:black}
 .btn-plus-cart:hover .order-list{  display:block}
 .search-form{  top:40px;   right:0;   width:240px;   height:40px;   padding:15px;   z-index:100}
@@ -112,6 +129,7 @@ li{ margin-top:20px}
 .btn:active{ background: -moz-linear-gradient(top,#d84732 0%,#e1613e 100%);  background:-webkit-linear-gradient(top,#d84732 0%,#e1613e 100%);  background: linear-gradient(to bottom,#d84732 0%,#e1613e 100%);  box-shadow:inset 0 2px 2px rgba(172,16,0,1)}
 
 .index-content{  margin:0;   padding:0 20px;   min-width:860px}
+.index-content h2{  padding:0}
 .index-content-left, 
 .index-content-right, 
 .new-in-blog, 
@@ -125,15 +143,16 @@ li{ margin-top:20px}
 .index-content-right{  background:#662e0c url('../img/choko-bg.jpg') no-repeat 50% 50%}
 .index-content .btn{ position:absolute;  right:25px;  bottom:25px}
 
-.hits{  font-size:0;   max-width:1160px;   min-width:860px;   margin:0;   padding:0 20px}
-.item-fix{  position:relative;   display:inline-block;   vertical-align:top;   width:21%;   min-height:200px;   margin-right:2.2%;   border-radius:5px;   margin-bottom:20px}
-.item{  position:relative; margin:0;   padding:0; width:100%; font-size:16px;   text-align:center}
+.hits{ font-size:0;  max-width:1160px;  min-width:860px;  margin:0;  padding:0 20px;   margin-bottom:5px}
+.item-fix{ position:relative;  display:inline-block;  vertical-align:top;  width:23%;   margin-right:2.2%;  border-radius:5px;  margin-bottom:20px}
+.item{ position:relative; margin:0;  padding:0; width:100%;  font-size:16px;   text-align:center}
 .item-fix:nth-child(4n){  margin-right:auto}
 .item img{  display:block;   width:100%;   height:100%}
-.item b{  position:absolute;   top:155px;   left:10px;   font-size:30px;   text-shadow:2px 2px 5px grey}
+.item div{  margin:0;   padding:0;   position:relative}
+.item b{  position:absolute;   bottom:15px;   left:0px;   font-size:30px;   text-shadow:2px 2px 5px grey}
 .item b span{  font-size:45px}
 .item p{  margin-bottom:0;   font-weight:normal;   text-decoration:underline}
-.hits .item::before{  content:'';   position:absolute;   width:60px;   height:60px;   border-radius:50%;   background-color:white;   background-image:url('../img/hit.png');  top:0;  left:0}
+.hits .item::before{  content:'';   position:absolute;   width:60px;   height:60px;   border-radius:50%;   background-color:white;   background-image:url('../img/hit.png');  top:0;  left:0;  z-index:100}
 .item .btn{ position:absolute;  display:none;  font-size:15px;  width:70%;  margin-top:10px;  left:50%;  transform:translateX(-50%);  white-space:nowrap}
 .item-bg{ display:none;  width:100%;  height:100%;  padding:10px;  padding-bottom:70px;  background-color:rgba(255,255,255,0.4);  position:absolute;  left:-10px;  top:-10px;  box-shadow:0 10px 20px 4px rgba(0,0,0,0.3);  border-radius:5px}
 .item-fix:hover .item{ z-index:501}
@@ -141,32 +160,35 @@ li{ margin-top:20px}
 .item-fix:hover .item-bg{ display:block;  z-index:500}
 .item-fix:hover p{ text-decoration:none}
 
-.about{    min-width:850px;   margin-bottom:40px;   padding-left:20px;   padding-right:20px;   min-height:250px}
-.about div{  background:#eadec3 url('../img/wafer.jpg') repeat 50% 50%;  padding:30px 25px 25px 25px;  color:black;  border-radius:25px;  text-align:left}
-.about p{ position:relative; display:inline-block;  vertical-align:top; width:41%;  text-align:left; margin:0 2.2% 20px 0;  padding-left:60px;  font-weight:normal}
-.about p:nth-child(odd){ margin-right:0}
-.about h4{ font-size:24px;  margin:0;  margin-bottom:20px}
-
-.ice{  background:url('../img/ice-cream.svg') no-repeat}
-.cow{  background:url('../img/cow.svg') no-repeat}
-.leaf{  background:url('../img/leaf.svg') no-repeat}
-.temperature{  background:url('../img/temperature.svg') no-repeat}
+.about{  max-width:1160px;   min-width:850px;   margin-bottom:40px;   padding-left:20px;   padding-right:20px;   min-height:250px}
+.about div{  background:#eadec3 url('../img/wafer.jpg') repeat 50% 50%;  padding:25px 25px 10px 25px;  color:black;  border-radius:25px;  text-align:left}
+.about p{ position:relative; display:inline-block;  vertical-align:top; width:41%;  text-align:left; margin:0 2.2% 20px 0;   padding-left:60px;   font-weight:normal}
+.about p:nth-child(odd){  margin-right:0}
+.about h4{  font-size:24px;   line-height:30px;   font-weight:500;   margin:0;   margin-bottom:20px}
+.about p::before{  position:absolute;   content:'';   width:50px;   height:50px;   top:-10px;   left:0}
+.ice::before{  background:url('../img/ice-cream.svg') no-repeat}
+.cow::before{  background:url('../img/cow.svg') no-repeat}
+.leaf::before{  background:url('../img/leaf.svg') no-repeat}
+.temperature::before{  background:url('../img/temperature.svg') no-repeat}
 
 .combo-info{  margin-bottom:40px;   padding:0 20px 0 20px;   min-height:180px}
 .new-in-blog, 
-.subscribe{  color:#5a5a5a;   border-radius:25px;   width:45%;   min-height:220px;   padding-left:20px;   padding-right:20px;   font-size:16px;   font-weight:500;   margin:0}
-.new-in-blog{  background:url('../img/sweet-bg.jpg') 30% -220px no-repeat white;   height:1px;   padding:10px;   padding-left:20px;   padding-right:20px}
-.new-in-blog a{  font-weight:bold;   color:black;   font-size:24px;   background-color:rgba(255,255,255,0.7)}
+.subscribe{  color:#5a5a5a;   border-radius:25px;   width:45%;   min-height:210px;   padding-left:20px;   padding-right:20px;   font-size:16px;   font-weight:500;   margin:0}
+.new-in-blog{  background:url('../img/sweet-bg.jpg') 20% -220px no-repeat white;   height:1px;   padding:10px 20px;   min-height:200px}
+.new-in-blog a{  font-weight:bold;   color:black;   font-size:24px;   padding-left:5px;   background-color:rgba(255,255,255,0.7)}
+.new-in-blog p{  margin-top:10px;   padding-left:5px;   margin-bottom:10px}
 .subscribe{  background:url('../img/mail-pattern.png') white;  height:1px;  padding:5px}
-.subscribe input[type="email"]{ padding-left:10px;  font-size:16px;  font-weight:normal;  height:44px}
+.subscribe p{ font-family:"Roboto",Helvetica,Arial,sans-serif;  font-size:16px;  font-weight:normal;  line-height:22px;  margin-bottom:40px}
+.subscribe input[type="email"]{ padding-left:10px;  font-size:16px;  font-weight:normal;  height:44px;  outline:none}
 .patch{ height:100%;  border-radius:25px;  background-color:#f8f7f4;  padding-left:20px;  padding-right:20px;  border:1px solid transparent}
  .patch .email{ height:45px;  width:55%;  border-radius:5px;  font-size:16px;  font-weight:normal}
  .patch .btn{ float:right;  border:none;  margin-left:7px;  font-size:17px;  line-height:24.3px;  font-weight:bold}
 
 .location{  position:relative; width:100%;   padding:0; height:430px;   background:#f7f1d9 url("../img/map-bg.jpg") no-repeat 50% 50%;  overflow:hidden}
-.adress{ right:20px;  top:65px;  position:absolute; width:260px; height:260px;  margin-right:25px; background-color:white; border-radius:25px; color:black; padding:20px; text-align:left;  font-size:14px;  line-height:22px;  font-weight:normal}
+.adress{ right:0px;  top:65px;  position:absolute; width:260px; height:260px;  margin-right:25px; background-color:white; border-radius:25px; color:black; padding:20px; text-align:left;  font-size:14px;  line-height:22px;  font-weight:normal}
+.adress p{ margin-top:5px;  margin-bottom:20px}
 .adress b{ font-size:18px;  line-height:24px;  font-weight:bold}
-.adress .btn{ min-width:220px;  font-size:18px;  line-height:45px;  font-weight:normal}
+.adress .btn{ min-width:220px;  font-size:17px;  line-height:45px;  font-weight:bold}
 
 .link-back, 
 .shade{ display:none;  position:fixed}
@@ -187,8 +209,8 @@ li{ margin-top:20px}
 .link-back textarea{ width:348px;  height:155px;  overflow:auto;  padding:0 15px;  margin-bottom:25px}
 .link-back input[type="submit"]{ border:none;  float:right;  width:140px}
 .link-back label{ position:absolute;  font-size:11px;  font-weight:normal;  display:none}
-.link-back input[type="text"]:focus+label{ display:block;  top:48px;  left:40px;  color:#8fbdec}
-.link-back input[type="email"]:focus+label{ display:block;  top:118px;  left:40px;  color:#8fbdec}
+.link-back input[type="text"]:focus+label{ display:block;  top:80px;  left:40px;  color:#8fbdec}
+.link-back input[type="email"]:focus+label{ display:block;  top:148px;  left:40px;  color:#8fbdec}
 .link-back-show, 
 .shade-show{ display:block}
 
@@ -198,7 +220,7 @@ footer{  max-width:1160px;   min-width:860px; min-height:100px;  font-size:13px;
 .footer-social, 
 .refs, 
 .copyright{display:inline-block;   margin-top:20px}
-.footer-social{  padding:0;   margin-top:30px;   margin-right:10%;   min-width:200px}
+.footer-social{  padding:0;   padding-left:5px;   margin-top:30px;   margin-right:10%;   min-width:200px}
 .social-btn{  display:inline-block;   vertical-align:top;   font-size:0px;   width:40px;   height:40px;   margin-right:10px;   border-radius:50%;   padding:0;   opacity:0.7}
 .social-btn-twet{  background:rgba(255,255,255,0.4) url('../img/sprite.png') no-repeat -6px -372px}
 .social-btn-inst{  background:rgba(255,255,255,0.4) url('../img/sprite.png') no-repeat -6px -247px}
@@ -207,8 +229,8 @@ footer{  max-width:1160px;   min-width:860px; min-height:100px;  font-size:13px;
 .social-btn:hover{  opacity:1}
 
 .refs{  margin:0;   margin-top:30px;   width:350px}
-.copyright{  width:200px;   font-size:12px; text-align:left}
-.copyright p{  margin:0}
+.copyright{  width:200px;   font-size:12px; text-align:left;   margin-top:17px;   padding-left:3px}
+.copyright p{  margin:0;   font-weight:normal}
 .refs-left, 
 .refs-right{display:inline-block;   vertical-align:top;   text-align:left}
 .refs-left a, 
@@ -222,7 +244,7 @@ footer{  max-width:1160px;   min-width:860px; min-height:100px;  font-size:13px;
 
 .current-page{ color:white;  background-color:#d07058;  border-radius:25px;  height:25px;  width:65px}
 .no-events{ pointer-events:none}
-.no-events .menu-item-1 a{ border-bottom:none}
+.main-navigation .current-page a{ border-bottom:none}
 
 .bread-crumbs li, 
 .filter label, 
@@ -233,28 +255,28 @@ footer{  max-width:1160px;   min-width:860px; min-height:100px;  font-size:13px;
 .paginator li{display:inline-block;  vertical-align:top;  padding:0;  margin:0}
 .bread-crumbs, 
 h2{ display:block;  text-align:left;  padding:0;  margin:0}
-.bread-crumbs{ margin-top:30px;  margin-bottom:10px;  padding-left:30px}
-h2{ font-size:35px;  margin-bottom:30px;  padding-left:30px}
+.bread-crumbs{ margin-top:25px;  margin-bottom:10px;  padding-left:30px}
+h2{ font-size:35px;  margin-bottom:33px;  padding-left:30px}
 .bread-crumbs li:last-of-type, 
 .bread-crumbs li a{ color:white;  font-weight:normal;  font-size:14px;  text-decoration:none}
 
 .bread-crumbs li a{border-bottom:1px solid white}
 
-.filter{ font-weight:normal;  font-size:14px;  text-align:left;    margin-bottom:25px;   padding-left:30px}
+.filter{ font-weight:normal;  font-size:14px;  text-align:left;    margin-bottom:35px;   padding-left:30px}
 .selection-range{  -webkit-appearance:none;    -moz-appearance:none;     appearance:none;   color:white;   outline:none;   font-weight:normal;   font-size:16px;   border-radius:25px;   height:36px;   line-height:36px;   padding:0 10px;   margin-right:10px;   border:none;   background-color:rgba(255,255,255,0.3)}
-.filter-item{  padding-right:20px;   width:175px;   background:rgba(255,255,255,0.3) url('../img/arrow-white.png') no-repeat 95% 50%}
+.filter-item{  padding-right:20px;   width:190px;   background:rgba(255,255,255,0.3) url('../img/arrow-white.png') no-repeat 95% 50%}
 .filter-item:hover{  color:black;   background:white url('../img/arrow-black.png') no-repeat 95% 50%}
 input[name="fat"], 
 input[name="filler"]{ display:none}
 
 /*FAT*/
+.fat label{ margin-right:15px}
 input[name="fat"]+label{ position:relative;  display:inline-block;  vertical-align:top;  padding-left:35px;  cursor:pointer}
 input[name="fat"]+label::before{ content:'';  position:absolute;  width:20px;  height:20px;  border-radius:50%;  border:1px solid white;  left:5px;  top:6px}
 input[name="fat"]:checked+label::after{ content:'';  position:absolute;  background-color:white;  width:12px;  height:12px;  border-radius:50%;  left:10px;  top:11px}
 /*FAT*/
-.filler{  margin-top:20px}
-.filler label, 
-.fat label{  margin-right:20px}
+.filler{  margin-top:20px;   width:710px}
+.filler label{  margin-right:15px}
 .filler label:last-of-type, 
 .fat label:last-of-type{  margin-right:0}
 input[name="filler"]+label{  position:relative;   display:inline-block;   vertical-align:top;   padding-left:35px;   cursor:pointer}
@@ -269,20 +291,15 @@ input[name="filler"]:checked+label::before{  background-image:url('../img/cb-on.
 .max-toggle{ top:50%;  margin:-10px 0 0 -10px;  left:160px}
 .range-toggles .toggle:hover{ transform:scale(1.2)}
 
- .filter-btn{ width:140px;  height:36px;  line-height:36px;  border-radius:25px;  background-image:none;  background-color:rgba(255,255,255,0.3);  color:white;  font-weight:normal;  border:1px solid white;  margin-top:41px;  outline:none}
- .filter-btn:hover{ color:black;  background-color:white}
-.filter-btn:active{ color:black;  background-color:#eaeaea;  background-image:none;  box-shadow:inset 0px 1px 1px 0 black}
+ .filter-btn{ width:145px;  height:36px;  line-height:36px;  border-radius:25px;  background-image:none;  background-color:rgba(255,255,255,0.3);  color:white;  font-weight:medium;  border:1px solid white;  margin-top:41px;  outline:none;  font-size:16px}
+ .filter-btn:hover{ color:black;  background-color:white;  outline:none}
+.filter-btn:active{ color:black;  background-color:#eaeaea;  background-image:none;  box-shadow:inset 0px 1px 1px 0 black;  outline:none}
 
-.paginator{ margin-top:60px;  margin-bottom:35px;  padding-right:20px}
-.paginator a{ text-decoration:none;  color:white;  font-weight:normal;  font-size:16px;  width:25px;  height:25px;  border-radius:50%;  padding:5px 10px}
+.paginator{ margin-top:35px;  margin-bottom:35px;  padding-right:10px}
+.paginator a{ text-decoration:none;  color:white;  font-weight:normal;  font-size:16px;  width:20px;  height:20px;  border-radius:50%;  padding:5px 10px}
 .paginator .paginator-not-active{ opacity:0.4;  pointer-events:none}
 .paginator .paginator-page-active{ color:black;  background-color:white;  pointer-events:none}
 .paginator a:hover{ background-color:rgba(255,255,255,0.3)}
-
-input, 
-textarea{ border:2px solid #d3d3d2}
-input:hover, 
-textarea:hover{ border:2px solid #c7c6c5}
 
 main >input[type="radio"]{ display:none}
 
@@ -304,13 +321,13 @@ main >input[type="radio"]{ display:none}
 
 .slide-title{  width:700px;   margin:0 auto;   margin-bottom:30px;   line-height:60.35px;   font-weight:800;   font-size:60px}
 
-.slide-btn{  display:inline-block;   padding:12px 50px;   font-weight:600;   font-size:31px;   line-height:41px;   vertical-align:top;   color:#fff;   text-decoration:none;   text-shadow:0 2px 5px rgba(160,32,11,0.76);   background:#f26843;   background:   -moz-linear-gradient(top,#f26843 0%,#e74a35 100%);   background:-webkit-linear-gradient(top,#f26843 0%,#e74a35 100%);   background:        linear-gradient(to bottom,#f26843 0%,#e74a35 100%);   border-radius:100px;   box-shadow:0 2px 2px rgba(172,16,0,0.64)}
+.slide-btn{  display:inline-block;   padding:12px 55px 12px 40px;   width:180px;   white-space:nowrap;   font-weight:600;   font-size:31px;   line-height:41px;   vertical-align:top;   color:#fff;   text-decoration:none;   text-shadow:0 2px 5px rgba(160,32,11,0.76);   background:#f26843;   background:   -moz-linear-gradient(top,#f26843 0%,#e74a35 100%);   background:-webkit-linear-gradient(top,#f26843 0%,#e74a35 100%);   background:        linear-gradient(to bottom,#f26843 0%,#e74a35 100%);   border-radius:100px;   box-shadow:0 2px 2px rgba(172,16,0,0.64)}
 
 .slide-btn:hover{  background:   -moz-linear-gradient(top,#f58669 0%,#ec6f5e 100%);   background:-webkit-linear-gradient(top,#f58669 0%,#ec6f5e 100%);   background:        linear-gradient(to bottom,#f58669 0%,#ec6f5e 100%);   box-shadow:0 2px 2px rgba(172,16,0,1)}
 
 .slide-btn:active{  background:   -moz-linear-gradient(top,#d84732 0%,#e1613e 100%);   background:-webkit-linear-gradient(top,#d84732 0%,#e1613e 100%);   background:        linear-gradient(to bottom,#d84732 0%,#e1613e 100%);   box-shadow:inset 0 2px 2px rgba(172,16,0,1)}
 
-.slider-controls{  padding-left:20px;   position:absolute;   bottom:25px;   left:0;   z-index:20;   font-size:0}
+.slider-controls{  padding-left:20px;   position:absolute;   bottom:15px;   left:10px;   z-index:20;   font-size:0}
 
 .slider-controls label{  display:inline-block;   width:17px;   height:17px;   margin-right:8px;   vertical-align:top;   background-color:transparent;   border:2px solid #fff;   border-radius:50%;   cursor:pointer}
 
@@ -333,10 +350,7 @@ main >input[type="radio"]{ display:none}
 .no-js-link-back{ display:block;  position:relative;  top:300px;  left:600px;  margin-bottom:400px;  z-index:0}
 .bread-crumbs a:hover, 
 .refs a:hover, 
-.copyright a:hover, 
-
-.main-navigation >ul >li:not(:nth-child(1)) a:hover{ color:#ec593c;  border-bottom-color:#ec593c}
+.copyright a:hover{ color:#ec593c;  border-bottom-color:#ec593c}
 .bread-crumbs a:active, 
 .refs a:active, 
-.copyright a:active, 
-.main-navigation >ul >li:not(:nth-child(1)) a:active{ color:#ec593c;  border-bottom-color:#ec593c}
+.copyright a:active{ color:#ec593c;  border-bottom-color:#ec593c}

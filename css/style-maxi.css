@@ -44,8 +44,28 @@ ul {
 li {
   margin-top: 20px;
 }
+/*ПО ИНПУТАМ*/
+input,
+textarea {
+  border: 2px solid #d3d3d2;
+  outline: none;
+}
+input:hover,
+textarea:hover {
+  border: 2px solid #c7c6c5;
+}
+input:focus,
+textarea:focus {
+  border: 2px solid #8fbdec;
+}
+
+/*ПО ИНПУТАМ*/
 .catalog {
 	font-size: 0;
+  padding: 0 20px;
+}
+.catalog .item-fix {
+  margin-bottom: 40px;
 }
 
 .main-navigation a {
@@ -92,7 +112,7 @@ li {
 	float: left;
 }
 .main-navigation img {
-  margin-right: 15px;
+  margin-right: 20px;
 }
 
 .main-navigation > ul > li:last-child,
@@ -115,10 +135,11 @@ li {
 
 .nav-btns {
   padding-top: 15px;
+  margin-right: 10px;
 /*  padding-right: 40px;*/
 }
 .work-time-block {
-  margin-right: 20px;
+  margin-right: 25px;
 }
 .work-time-block .work-time,
 .work-time-block .work-phone {
@@ -129,26 +150,42 @@ li {
 }
 .work-time-block .work-phone {
   font-size: 22px;
-  line-height: 35px;
+  line-height: 25px;
 }
 
 /*ВЫПАДАЮЩАЯ МЕНЮХА*/
 /*.menu-item-1 {
   position: relative;
 }*/
-.main-navigation ul li {
-  padding: 5px 10px 5px 10px;
+.main-navigation > ul  li {
+  padding: 5px 10px 5px 9px;
   margin-right: 10px;
+  margin-top: 17px;
 }
 .main-navigation ul a {
   margin: 0;
   padding: 0;
   font-size: 16px;
 }
+.main-navigation > ul > li:hover {
+  background-color: white;
+  border-radius: 25px;
+}
+.main-navigation > ul > li:hover a {
+  color: black;
+}
+.main-navigation > ul > li:active {
+  background-color: white;
+  border-radius: 25px;
+  box-shadow: inset 0px 1px 1px 0 black;
+}
+.main-navigation > ul > li:active a {
+  color: black;
+}
 .menu-item-1 {
   margin: 0;
   float: left;
-  margin-top: 20px;
+  margin-top: 17px;
 }
 .bottom-plus:hover .menu-item-1 {
   background-color: white;
@@ -162,7 +199,7 @@ li {
 }
 .sub-menu-1 {
   position: absolute;
- /* display: block;*/
+  /*display: block;*/
   width: 145px;
   min-height: 100px;
   background-color: white;
@@ -175,12 +212,12 @@ li {
   box-shadow: 0 5px 15px 2px rgba(0, 0, 0, 0.5);
   z-index: 100;
 }
-.sub-menu-1 li {
+.main-navigation .sub-menu-1 > li {
   text-align: left;
   width: 130px;
   height: 35px;
   margin: 0;
-  padding-left: 20px !important;
+  padding-left: 20px;
   color: black;
   text-decoration: none;
   font-weight: normal;
@@ -200,8 +237,20 @@ li {
 .sub-menu-1 li:hover {
   background-color: #fbded7;
 }
+.sub-menu-1 li:hover a {
+  color: black;
+}
 .sub-menu-1 li:active {
   background-color: #f6b5a5;
+}
+.sub-menu-1 li:active a{
+  color: black;
+}
+.sub-menu-1 .menu-current-page {
+  background-color: #d07058;
+}
+.sub-menu-1 .menu-current-page a{
+  color: white;
 }
 /*ВЫПАДАЮЩАЯ МЕНЮХА*/
 
@@ -245,7 +294,7 @@ li {
    color: black;
 }
 .cart {
-	width: 72px;
+	width: 70px;
   margin-right: 0;
   padding-left: 45px;
   background: rgba(255, 255, 255, 0.4) url('../img/sprite.png') no-repeat 5px -3px;
@@ -440,6 +489,9 @@ li {
   padding: 0 20px;
   min-width: 860px;
 }
+.index-content h2 {
+  padding: 0;
+}
 .index-content-left,
 .index-content-right,
 .new-in-blog,
@@ -484,13 +536,15 @@ li {
   min-width: 860px;
   margin: 0;
   padding: 0 20px;
+  /*height: 360px;*/
+  margin-bottom: 5px;
 }
 .item-fix {
   position: relative;
   display: inline-block;
   vertical-align: top;
-  width: 21%;
-  min-height: 200px;
+  width: 23%;
+  /*min-height: 200px;*/
   margin-right: 2.2%;
   border-radius: 5px;
   margin-bottom: 20px;
@@ -500,6 +554,7 @@ li {
 	margin: 0;
   padding: 0;
 	width: 100%;
+  /*min-height: 360px;*/
 	font-size: 16px;
   text-align: center;
 }
@@ -511,10 +566,15 @@ li {
   width: 100%;
   height: 100%;
 }
+.item div {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
 .item b {
   position: absolute;
-  top: 155px;
-  left: 10px;
+  bottom: 15px;
+  left: 0px;
   font-size: 30px;
   text-shadow: 2px 2px 5px grey;
 }
@@ -536,6 +596,7 @@ li {
   background-image: url('../img/hit.png');
   top: 0;
   left: 0;
+  z-index: 100;
 }
 .item .btn {
   position: absolute;
@@ -575,7 +636,7 @@ li {
 
 /*БЛОК ОБЩЕЙ ИНФОРМАЦИИ О ПРОИЗВОДСТВЕ*/
 .about {
-  
+  max-width: 1160px;
   min-width: 850px;
   margin-bottom: 40px;
   padding-left: 20px;
@@ -585,7 +646,7 @@ li {
 }
 .about div {
   background: #eadec3 url('../img/wafer.jpg') repeat 50% 50%;
-  padding: 30px 25px 25px 25px;
+  padding: 25px 25px 10px 25px;
   color: black;
   border-radius: 25px;
   text-align: left;
@@ -606,26 +667,29 @@ li {
 }
 .about h4 {
   font-size: 24px;
+  line-height: 30px;
+  font-weight: 500;
   margin: 0;
   margin-bottom: 20px;
 }
-/*.about::before {
+.about p::before {
   position: absolute;
+  content: '';
   width: 50px;
   height: 50px;
-  top: 50px;
+  top: -10px;
   left: 0;
-}*/
-.ice {
+}
+.ice::before {
   background: url('../img/ice-cream.svg') no-repeat;
 }
-.cow {
+.cow::before {
   background: url('../img/cow.svg') no-repeat;
 }
-.leaf {
+.leaf::before {
   background: url('../img/leaf.svg') no-repeat;
 }
-.temperature {
+.temperature::before {
   background: url('../img/temperature.svg') no-repeat;
 }
 /*БЛОК ОБЩЕЙ ИНФОРМАЦИИ О ПРОИЗВОДСТВЕ*/
@@ -641,7 +705,7 @@ li {
   color: #5a5a5a;
   border-radius: 25px;
   width: 45%;
-  min-height: 220px;
+  min-height: 210px;
   padding-left: 20px;
   padding-right: 20px;
   font-size: 16px;
@@ -649,28 +713,41 @@ li {
   margin: 0;
 }
 .new-in-blog {
-  background: url('../img/sweet-bg.jpg') 30% -220px no-repeat white;
+  background: url('../img/sweet-bg.jpg') 20% -220px no-repeat white;
   height: 1px;
-  padding: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 10px 20px;
+  min-height: 200px;
 }
 .new-in-blog a {
   font-weight: bold;
   color: black;
   font-size: 24px;
+  padding-left: 5px;
   background-color: rgba(255, 255, 255, 0.7);
+}
+.new-in-blog p {
+  margin-top: 10px;
+  padding-left: 5px; 
+  margin-bottom: 10px;
 }
 .subscribe {
   background: url('../img/mail-pattern.png') white;
   height: 1px;
   padding: 5px;
 }
+.subscribe p {
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 22px;
+  margin-bottom: 40px;
+}
 .subscribe input[type="email"] {
   padding-left: 10px;
   font-size: 16px;
   font-weight: normal;
   height: 44px;
+  outline: none;
 }
 .patch {
   height: 100%;
@@ -706,7 +783,7 @@ li {
   overflow: hidden;
 }
 .adress {
-  right: 20px;
+  right: 0px;
   top: 65px;
   position: absolute;
 	width: 260px;
@@ -721,6 +798,10 @@ li {
   line-height: 22px;
   font-weight: normal;
 }
+.adress p {
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
 .adress b {
   font-size: 18px;
   line-height: 24px;
@@ -728,9 +809,9 @@ li {
 }
 .adress .btn {
   min-width: 220px;
-  font-size: 18px;
+  font-size: 17px;
   line-height: 45px;
-  font-weight: normal;
+  font-weight: bold;
 }
 
 /*ОБРАТНАЯ СВЯЗЬ*/
@@ -832,13 +913,13 @@ li {
 }
 .link-back input[type="text"]:focus + label {
   display: block;
-  top: 48px;
+  top: 80px;
   left: 40px;
   color: #8fbdec;
 }
 .link-back input[type="email"]:focus + label {
   display: block;
-  top: 118px;
+  top: 148px;
   left: 40px;
   color: #8fbdec;
 }
@@ -877,6 +958,7 @@ footer {
 }
 .footer-social {
   padding: 0;
+  padding-left: 5px;
   margin-top: 30px;
   margin-right: 10%;
   min-width: 200px;
@@ -917,9 +999,12 @@ footer {
   width: 200px;
   font-size: 12px;
 	text-align: left;
+  margin-top: 17px;
+  padding-left: 3px;
 }
 .copyright p {
   margin: 0;
+  font-weight: normal;
 }
 .refs-left,
 .refs-right {
@@ -975,8 +1060,8 @@ footer {
 .no-events {
   pointer-events: none;
 }
-.no-events .menu-item-1 a {
-  border-bottom: none
+.main-navigation .current-page a {
+  border-bottom: none;
 }
 
 /*КРОШКИ И ФИЛЬТР*/
@@ -1000,13 +1085,13 @@ h2 {
   margin: 0;
 }
 .bread-crumbs {
-  margin-top: 30px;
+  margin-top: 25px;
   margin-bottom: 10px;
   padding-left: 30px;
 }
 h2 {
   font-size: 35px;
-  margin-bottom: 30px;
+  margin-bottom: 33px;
   padding-left: 30px;
 }
 .bread-crumbs li:last-of-type,
@@ -1025,7 +1110,7 @@ h2 {
   font-size: 14px;
   text-align: left;
   /*max-width: 900px;*/
-  margin-bottom: 25px;
+  margin-bottom: 35px;
   padding-left: 30px;
 }
 .selection-range {
@@ -1046,7 +1131,7 @@ h2 {
 }
 .filter-item {
   padding-right: 20px;
-  width: 175px;
+  width: 190px;
   background: rgba(255, 255, 255, 0.3) url('../img/arrow-white.png') no-repeat 95% 50%;
 }
 .filter-item:hover {
@@ -1059,6 +1144,9 @@ input[name="filler"] {
 }
 
 /*FAT*/
+.fat label {
+  margin-right: 15px;
+}
 input[name="fat"] + label {
   position: relative;
   display: inline-block;
@@ -1091,10 +1179,10 @@ input[name="fat"]:checked + label::after {
 /*FILLER*/
 .filler {
   margin-top: 20px;
+  width: 710px;
 }
-.filler label,
-.fat label {
-  margin-right: 20px;
+.filler label {
+  margin-right: 15px;
 }
 .filler label:last-of-type,
 .fat label:last-of-type {
@@ -1164,43 +1252,46 @@ input[name="filler"]:checked + label::before {
 /*TOGGLE*/
 
  .filter-btn {
-  width: 140px;
+  width: 145px;
   height: 36px;
   line-height: 36px;
   border-radius: 25px;
   background-image: none;
   background-color: rgba(255, 255, 255, 0.3);
   color: white;
-  font-weight: normal;
+  font-weight: medium;
   border: 1px solid white;
   margin-top: 41px;
   outline: none;
+  font-size: 16px;
  }
  .filter-btn:hover {
   color: black;
   background-color: white;
+  outline: none;
  }
 .filter-btn:active {
   color: black;
   background-color: #eaeaea;
   background-image: none;
   box-shadow: inset 0px 1px 1px 0 black;
+  outline: none;
  }
 /*КРОШКИ И ФИЛЬТР*/
 
 /*ПАГИНАТОР*/
 .paginator {
-  margin-top: 60px;
+  margin-top: 35px;
   margin-bottom: 35px;
-  padding-right: 20px;
+  padding-right: 10px;
 }
 .paginator a {
   text-decoration: none;
   color: white;
   font-weight: normal;
   font-size: 16px;
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   padding: 5px 10px;
 }
@@ -1218,16 +1309,7 @@ input[name="filler"]:checked + label::before {
 }
 /*ПАГИНАТОР*/
 
-/*ПО ИНПУТАМ*/
-input,
-textarea {
-  border: 2px solid #d3d3d2
-}
-input:hover,
-textarea:hover {
-  border: 2px solid #c7c6c5;
-}
-/*ПО ИНПУТАМ*/
+
 
 /*СЛАЙДЕР*/
 main > input[type="radio"] {
@@ -1305,8 +1387,9 @@ main > input[type="radio"] {
 
 .slide-btn {
   display: inline-block;
-  padding: 12px 50px;
-
+  padding: 12px 55px 12px 40px;
+  width: 180px;
+  white-space: nowrap;
   font-weight: 600;
   font-size: 31px;
   line-height: 41px;
@@ -1340,8 +1423,8 @@ main > input[type="radio"] {
 .slider-controls {
   padding-left: 20px;
   position: absolute;
-  bottom: 25px;
-  left: 0;
+  bottom: 15px;
+  left: 10px;
   z-index: 20;
 
   font-size: 0;
@@ -1412,16 +1495,13 @@ main > input[type="radio"] {
 }
 .bread-crumbs a:hover,
 .refs a:hover,
-.copyright a:hover,
-/*иначе будут изменятся ссылки во вложенном меню и Каталог*/
-.main-navigation > ul >li:not(:nth-child(1)) a:hover {
+.copyright a:hover {
   color: #ec593c;
   border-bottom-color: #ec593c; 
 }
 .bread-crumbs a:active,
 .refs a:active,
-.copyright a:active,
-.main-navigation > ul >li:not(:nth-child(1)) a:active {
+.copyright a:active {
   color: #ec593c;
   border-bottom-color: #ec593c; 
 }
