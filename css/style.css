@@ -65,7 +65,7 @@ textarea:focus {
   padding: 0 20px;
 }
 .catalog .item-fix {
-  margin-bottom: 40px;
+  margin-bottom: 34px;
 }
 
 .main-navigation a {
@@ -506,9 +506,7 @@ textarea:focus {
   padding: 0;
 }
 .index-content-left,
-.index-content-right,
-.new-in-blog,
-.subscribe {
+.index-content-right {
 	width: 45%;
   border-radius: 20px;
   padding: 25px 20px;
@@ -727,31 +725,32 @@ textarea:focus {
 .subscribe {
   color: #5a5a5a;
   border-radius: 25px;
-  width: 46.5%;
+  width: 48.6%;
   min-height: 210px;
   padding-left: 20px;
   padding-right: 20px;
   font-size: 16px;
   font-weight: 500;
   margin: 0;
+  text-align: left;
 }
 .new-in-blog {
-  background: url('../img/sweet-bg.jpg') 20% -220px no-repeat white;
-  height: 1px;
-  padding: 10px 20px;
-  min-height: 200px;
+  background: url('../img/sweet-bg.jpg') 10% -220px no-repeat white;
+  min-height: 220px;
+  padding: 0;
 }
 .new-in-blog a {
   font-weight: bold;
   color: black;
   font-size: 24px;
-  padding-left: 5px;
   background-color: rgba(255, 255, 255, 0.7);
 }
 .new-in-blog p {
-  margin-top: 10px;
-  padding-left: 5px; 
-  margin-bottom: 10px;
+  margin: 25px 0 10px 20px;
+}
+.new-ref {
+  display: inline-block;
+  margin-left: 20px;
 }
 .subscribe {
   background: url('../img/mail-pattern.png') white;
@@ -763,7 +762,8 @@ textarea:focus {
   font-size: 16px;
   font-weight: normal;
   line-height: 22px;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
+  margin-top: 30px
 }
 .subscribe input[type="email"] {
   padding-left: 10px;
@@ -782,7 +782,7 @@ textarea:focus {
  }
  .patch .email {
    height: 45px;
-   width: 55%;
+   width: 65%;
    border-radius: 5px;
    font-size: 16px;
    font-weight: normal;
@@ -1092,6 +1092,9 @@ footer {
 .footer-inner > * {
   margin-top: 20px;
 }
+.footer-inner .refs {
+  margin-top: 15px;
+}
 /*ФУТЕР*/
 
 
@@ -1159,7 +1162,7 @@ h2 {
   font-size: 14px;
   text-align: left;
   /*max-width: 900px;*/
-  margin-bottom: 35px;
+  margin-bottom: 38px;
   padding-left: 30px;
 }
 .selection-range {
@@ -1330,8 +1333,8 @@ input[name="filler"]:checked + label::before {
 
 /*ПАГИНАТОР*/
 .paginator {
-  margin-top: 35px;
-  margin-bottom: 35px;
+  margin-top: 45px;
+  margin-bottom: 45px;
   padding-right: 10px;
 }
 .paginator a {
@@ -1548,13 +1551,15 @@ main > input[type="radio"] {
 }
 .bread-crumbs a:hover,
 .refs a:hover,
-.copyright a:hover {
+.copyright a:hover,
+.new-in-blog a:hover {
   color: #ec593c;
   border-bottom-color: #ec593c; 
 }
 .bread-crumbs a:active,
 .refs a:active,
-.copyright a:active {
+.copyright a:active,
+.new-in-blog a:active {
   color: #ec593c;
   border-bottom-color: #ec593c; 
 }
