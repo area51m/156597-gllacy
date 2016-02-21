@@ -1,3 +1,54 @@
-var link=document.querySelector(".link-back-btn"),popup=document.querySelector(".link-back"),shade=document.querySelector(".shade"),close=popup.querySelector(".link-back-close"),user=popup.querySelector("[name=name]"),email=popup.querySelector("[name=email]"),comment=popup.querySelector("[name=comment]"),storageu=localStorage.getItem("user"),storagem=localStorage.getItem("email");
-link.addEventListener("click",function(a){a.preventDefault();popup.classList.add("link-back-show");shade.classList.add("shade-show");storageu&&storagem?(user.value=storageu,email.value=storagem,comment.focus()):user.focus()});close.addEventListener("click",function(a){a.preventDefault();popup.classList.remove("link-back-show");shade.classList.remove("shade-show")});shade.addEventListener("click",function(a){a.preventDefault();popup.classList.remove("link-back-show");shade.classList.remove("shade-show")});
-popup.addEventListener("submit",function(a){user.value&&email.value?(localStorage.setItem("user",user.value),localStorage.setItem("email",email.value)):(a.preventDefault(),console.log("\u041d\u0443\u0436\u043d\u043e \u0432\u0432\u0435\u0441\u0442\u0438 \u0438\u043c\u044f \u0438 email"))});window.addEventListener("keydown",function(a){27===a.keyCode&&popup.classList.contains("link-back-show")&&(popup.classList.remove("link-back-show"),shade.classList.remove("shade-show"))});
+var link = document.querySelector(".link-back-btn");
+var popup = document.querySelector(".link-back");
+var shade = document.querySelector(".shade");
+var close = popup.querySelector(".link-back-close");
+var user = popup.querySelector("[name=name]");
+var email = popup.querySelector("[name=email]");
+var comment = popup.querySelector("[name=comment]");
+var storageu = localStorage.getItem("user");
+var storagem = localStorage.getItem("email");
+
+
+link.addEventListener("click", function(event) {
+    event.preventDefault();
+    popup.classList.add("link-back-show");
+    shade.classList.add("shade-show");
+    if (storageu && storagem) {
+          user.value = storageu;
+          email.value = storagem;
+          comment.focus();
+        } else {
+    user.focus();
+        }
+    });
+
+close.addEventListener("click", function(event) {
+	event.preventDefault();
+	popup.classList.remove("link-back-show");
+    shade.classList.remove("shade-show");
+});
+
+shade.addEventListener("click", function(event) {
+	event.preventDefault();
+	popup.classList.remove("link-back-show");
+    shade.classList.remove("shade-show");
+});
+
+popup.addEventListener("submit", function(event) {
+         if (!user.value || !email.value) {
+          event.preventDefault();
+          console.log("Нужно ввести имя и email");
+      } else {
+          localStorage.setItem("user", user.value);
+          localStorage.setItem("email", email.value);
+      }
+ });
+
+window.addEventListener("keydown", function(event) {
+        if (event.keyCode === 27) {
+          if (popup.classList.contains("link-back-show")) {
+            popup.classList.remove("link-back-show");
+            shade.classList.remove("shade-show");
+          }
+        };
+    });

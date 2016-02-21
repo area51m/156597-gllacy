@@ -965,6 +965,9 @@ textarea:focus {
 .shade-show {
   display: block;
 }
+.link-back-show {
+  animation: bounce 0.6s;
+}
 /*ОБРАТНАЯ СВЯЗЬ*/
 
 /*ФУТЕР*/
@@ -1538,6 +1541,10 @@ main > input[type="radio"] {
   left: 600px;
   margin-bottom: 400px;
   z-index: 0;
+  padding-top: 20px;
+}
+.no-js-link-back h3 {
+  margin-top: 0;
 }
 .bread-crumbs a:hover,
 .refs a:hover,
@@ -1550,4 +1557,18 @@ main > input[type="radio"] {
 .copyright a:active {
   color: #ec593c;
   border-bottom-color: #ec593c; 
+}
+@keyframes bounce {
+  0%   {
+    transform: translateY(-2000px);
+  }
+  70%  {
+    transform: translateY(30px);
+  }
+  90%  {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
