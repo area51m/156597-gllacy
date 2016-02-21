@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
-    <link rel="stylesheet" type="text/css" href="css/normalise.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/style.min.css">
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700,300&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
   </head>
 
@@ -14,14 +14,15 @@
       <nav class="main-navigation clearfix">
         <a href="index.html"><img src="img/logo.svg" width="155" height="70" alt="Gllacy Shop"></a>
         <ul>
-        <div class="bottom-plus"><li class="menu-item-1 current-page"><a href="#">Каталог</a></li> 
+        <li class="menu-item-1 current-page"><a href="#">Каталог</a>
+          <div class="padding-top"> 
           <ul class="sub-menu-1">
             <li><a href="#">Новинки</a></li>
             <li class="menu-current-page"><a href="catalog.html">Сливочное</a></li>
             <li><a href="#">Щербеты</a></li>
             <li><a href="#">Фруктовый&nbsp;лед</a></li>
             <li><a href="#">Мелорин</a></li>
-          </ul> </div>        
+          </ul></div> </li>       
         <li><a href="#">Доставка и оплата</a></li>
         <li><a href="#">О Компании</a></li>
         </ul>
@@ -130,7 +131,7 @@
               <label for="filler5"> джемы</label>
             </div>
           </div>
-          <input href="#" type="submit" class="filter-btn" value="Применить">
+          <input type="submit" class="filter-btn" value="Применить">
         </form>
         <section class="catalog">
           <div class="item-fix">

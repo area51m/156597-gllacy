@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.min.css">
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700,300&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
   </head>
 
@@ -23,14 +23,15 @@
       <nav class="main-navigation clearfix">
         <img src="img/logo.svg" width="155" height="70" alt="Gllacy Shop">
         <ul>
-        <div class="bottom-plus"><li class="menu-item-1"><a href="#">Каталог</a></li> 
+         <li class="menu-item-1"><a href="#">Каталог</a> 
+          <div class="padding-top">
           <ul class="sub-menu-1">
             <li><a href="#">Новинки</a></li>
             <li><a href="catalog.html">Сливочное</a></li>
             <li><a href="#">Щербеты</a></li>
             <li><a href="#">Фруктовый&nbsp;лед</a></li>
             <li><a href="#">Мелорин</a></li>
-          </ul> </div>        
+          </ul></div></li>       
         <li><a href="#">Доставка и оплата</a></li>
         <li><a href="#">О Компании</a></li>
         </ul>
@@ -157,9 +158,10 @@
         </div>
       </section>
       <section class="about">
-        <div>
-        <h4>Магазин Глейси &#8212; это онлайн и оффлайн магазин по продаже
+        <div class="clearfix">
+        <h4>Магазин Глейси &#8212; это онлайн и офлайн магазин по продаже
           мороженного собственного производства на развес</h4>
+          <div class="clearfix">
         <p class="ice">
           Все наше мороженное изготавливается на
           собственном производстве, с
@@ -172,7 +174,8 @@
           у проверенных фермерских хозяйств и
           компаний, с которыми нас связывает
           долговременное сотрудничество.
-        </p>
+        </p></div>
+        <div class="clearfix">
         <p class="leaf">
           Для приготовления мороженного
           используются настоящие сливки и молоко
@@ -186,7 +189,7 @@
           термопаке, которая не дает мороженному
           растаять в пути и позволяет ему сохранить
           свой превосходный вкус.
-        </p>
+        </p></div>
         </div>
       </section>
       <section class="combo-info clearfix">
@@ -206,20 +209,23 @@
       </div>
       </div>
       </section>
+      </div>
 
       <section class="location">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651586!2d30.320894616097!3d59.938794181876254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0KDQvtGB0YHQuNGPLCAxOTExODY!5e0!3m2!1sru!2sua!4v1455970186693" width="1200" height="576" frameborder="0" style="border:0" allowfullscreen></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651586!2d30.320894616097!3d59.938794181876254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0KDQvtGB0YHQuNGPLCAxOTExODY!5e0!3m2!1sru!2sua!4v1455970186693" width="100%" height="430" frameborder="0" style="border:0" allowfullscreen></iframe>
+        <div class="content-wrapper">
+        <div class="adress-container clearfix">
         <div class="adress">
-          <p>Адрес главного офиса и<br> офнлайн магазина:<br>
-          <b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b><br>
-          <br>
-          Для заказов по телефону:<br>
+          <p>Адрес главного офиса и<br> офлайн магазина:<br>
+          <b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b></p>
+          <p>Для заказов по телефону:<br>
           <b>8 812 450-25-25</b><br>
           (с 10 до 20 ежедневно)</p>
           <a class="btn link-back-btn" href="#">Форма обратной связи</a>
-        </div>
+        </div></div></div>
       </section>
-    
+
+      <div class="content-wrapper">    
       <footer>
         <section class="footer-social">
           <a class="social-btn social-btn-twet" href="#">Твиттер</a>
@@ -246,13 +252,14 @@
         </div>
     </div>
 
+
      <!--  </section> -->
       
       
     </main>
     <div class="shade"></div>
     <form class="link-back" method="post">
-      <h2>Мы обязательно ответим!</h2>
+      <h3>Мы обязательно ответим!</h3>
       <button class="link-back-close"></button>
       <input type="text" name="name" id="link-name" placeholder="Как Вас зовут?" required>
       <label for="link-name">Как Вас зовут?</label>
