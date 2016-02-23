@@ -68,13 +68,13 @@ textarea:focus {
   margin-bottom: 34px;
 }
 
-.main-navigation a {
+.menu-base a {
 	text-decoration: none;
 	color: white;
   margin: 0;
 }
 
-.main-navigation li > a {
+.menu-base a {
 	border-bottom: 1px solid rgba(255, 255, 255, 0.4);
 }
 .main-navigation {
@@ -104,8 +104,8 @@ textarea:focus {
 .main-navigation a,
 .index-content-left,
 .new-in-blog,
-.main-navigation > ul,
-.main-navigation > ul > li,
+ul,
+ul > li,
 .footer-social,
 .refs,
 .social-btn {
@@ -115,8 +115,8 @@ textarea:focus {
   margin-right: 13px;
 }
 
-.main-navigation > ul > li:last-child,
-.main-navigation > ul {
+ul > li:last-child,
+nav > ul {
   margin-right: 0;
 }
 /*.main-navigation > ul {
@@ -167,44 +167,45 @@ textarea:focus {
   top: 20px;
   left: 0;
 }
-.main-navigation > ul  li {
+ul  li {
   padding: 4px 10px 4px 12px;
   margin-right: 10px;
   margin-top: 17px;
 }
-.main-navigation > ul > li:first-of-type {
+ul > li:first-of-type {
   position: relative;
 }
-.main-navigation ul a {
+ul a {
   margin: 0;
   padding: 0;
   font-size: 16px;
 }
-.main-navigation > ul > li:hover {
+.menu-base > li:hover {
   background-color: white;
   border-radius: 25px;
 }
-.main-navigation > ul > li:hover a {
+li:hover > a {
   color: black;
 }
-.main-navigation > ul > li:active {
+.menu-base > li:active {
   background-color: white;
   border-radius: 25px;
   box-shadow: inset 0px 1px 1px 0 black;
 }
-.main-navigation > ul > li:active a {
+li:active a {
   color: black;
 }
 .menu-item-1 {
   margin: 0;
   float: left;
   margin-top: 17px;
+  margin-right: 10px;
 }
 .menu-item-1:hover .menu-item-1 {
   background-color: white;
   border-radius: 25px;
 }
-.menu-item-1:hover .menu-item-1 a {
+.menu-item-1:hover a:not(.menu-current-raw) {
   color: black;
 }
 .menu-item-1:hover .padding-top {
@@ -225,19 +226,19 @@ textarea:focus {
   box-shadow: 0 5px 15px 2px rgba(0, 0, 0, 0.5);
   z-index: 100;
 }
-.main-navigation .sub-menu-1 > li {
+.sub-menu-1 > li {
   text-align: left;
   width: 130px;
   height: 35px;
   margin: 0;
   padding-left: 20px;
-  color: black;
+  /*color: black;*/
   text-decoration: none;
   font-weight: normal;
   font-size: 14px;
   line-height: 35px;
 }
-.sub-menu-1 li a {
+.sub-menu-1 a:not(.menu-current-raw) {
   font-size: 14px;
   color: black;
   border: none;
@@ -250,20 +251,22 @@ textarea:focus {
 .sub-menu-1 li:hover {
   background-color: #fbded7;
 }
-.sub-menu-1 li:hover a {
-  color: black;
-}
 .sub-menu-1 li:active {
   background-color: #f6b5a5;
 }
-.sub-menu-1 li:active a{
-  color: black;
-}
 .sub-menu-1 .menu-current-page {
   background-color: #d07058;
-}
-.sub-menu-1 .menu-current-page a{
   color: white;
+}
+.menu-current-page .menu-current-raw {
+  font-size: 14px;
+  border: none;
+  text-decoration: none;
+  color: white;
+}
+.menu-current-raw:active,
+.menu-current-raw:hover {
+  color: black;
 }
 /*ВЫПАДАЮЩАЯ МЕНЮХА*/
 
@@ -504,6 +507,7 @@ textarea:focus {
 }
 .index-content h2 {
   padding: 0;
+  margin-bottom: 30px;
 }
 .index-content-left,
 .index-content-right {
@@ -589,7 +593,7 @@ textarea:focus {
   font-size: 30px;
   text-shadow: 2px 2px 5px grey;
 }
-.item b span {
+.item span {
   font-size: 45px;
 }
 .item p {
@@ -647,8 +651,8 @@ textarea:focus {
 
 /*БЛОК ОБЩЕЙ ИНФОРМАЦИИ О ПРОИЗВОДСТВЕ*/
 .about {
-  max-width: 1140px;
-  min-width: 830px;
+  max-width: 1150px;
+  min-width: 840px;
   margin-bottom: 40px;
   padding-left: 20px;
   padding-right: 20px;
@@ -662,7 +666,7 @@ textarea:focus {
   border-radius: 25px;
   text-align: left;
 }
-.about div div {
+.about .box {
   margin: 0;
   padding: 0;
 }
@@ -782,7 +786,7 @@ textarea:focus {
  }
  .patch .email {
    height: 45px;
-   width: 65%;
+   min-width:59%;
    border-radius: 5px;
    font-size: 16px;
    font-weight: normal;
@@ -835,10 +839,10 @@ textarea:focus {
   line-height: 24px;
   font-weight: bold;
 }
-.adress-container .adress p:nth-child(1) {
+.adress p:nth-child(1) {
   margin-bottom: 10px;
 }
-.adress-container .adress p:nth-child(2) {
+.adress p:nth-child(2) {
   margin-bottom: 25px;
 }
 .adress .btn {
@@ -949,13 +953,13 @@ textarea:focus {
   font-weight: normal;
   display: none;
 }
-.link-back input[type="text"]:focus + label {
+.link-back-input-name:focus + label {
   display: block;
   top: 52px;
   left: 40px;
   color: #8fbdec;
 }
-.link-back input[type="email"]:focus + label {
+.link-back-input-email:focus + label {
   display: block;
   top: 120px;
   left: 40px;
@@ -1112,7 +1116,7 @@ footer {
 .no-events {
   pointer-events: none;
 }
-.main-navigation .current-page a {
+.current-page > a {
   border-bottom: none;
 }
 
@@ -1129,31 +1133,38 @@ footer {
   padding: 0;
   margin: 0;
 }
+.bread-crumbs-container {
+  margin-top: 25px;
+}
 .bread-crumbs,
 h2 {
-  display: block;
   text-align: left;
   padding: 0;
   margin: 0;
 }
-.bread-crumbs {
-  margin-top: 25px;
-  margin-bottom: 10px;
-  padding-left: 30px;
-}
-h2 {
+.product-group {
+  margin-top: 0px;
   font-size: 35px;
   margin-bottom: 33px;
   padding-left: 30px;
 }
+.bread-crumbs {
+  margin-top: 0px;
+  margin-bottom: 10px;
+  padding-left: 30px;
+  float: left;
+}
 .bread-crumbs li:last-of-type,
-.bread-crumbs li a {
+.bread-crumbs a {
   color: white;
   font-weight: normal;
   font-size: 14px;
   text-decoration: none;
 } 
-.bread-crumbs li a {
+.bread-crumbs li {
+  padding-right: 10px;
+}
+.bread-crumbs a {
 	border-bottom: 1px solid white;
 }
 
@@ -1197,7 +1208,7 @@ input[name="filler"] {
 
 /*FAT*/
 .fat label {
-  margin-right: 15px;
+  margin-right: 12px;
 }
 input[name="fat"] + label {
   position: relative;
@@ -1226,6 +1237,9 @@ input[name="fat"]:checked + label::after {
   left: 10px;
   top: 11px;
 }
+.fat label:last-of-type {
+  margin-right: 7px;
+}
 /*FAT*/
 
 /*FILLER*/
@@ -1236,8 +1250,7 @@ input[name="fat"]:checked + label::after {
 .filler label {
   margin-right: 15px;
 }
-.filler label:last-of-type,
-.fat label:last-of-type {
+.filler label:last-of-type {
   margin-right: 0;
 }
 input[name="filler"] + label {
@@ -1333,9 +1346,14 @@ input[name="filler"]:checked + label::before {
 
 /*ПАГИНАТОР*/
 .paginator {
-  margin-top: 45px;
-  margin-bottom: 45px;
+  margin-top: 48px;
+  margin-bottom: 37px;
   padding-right: 10px;
+  text-align: right;
+}
+.paginator ul {
+  float: none;
+  text-align: right;
 }
 .paginator a {
   text-decoration: none;
